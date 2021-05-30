@@ -10,6 +10,7 @@
         <element id="directory" name="lib">
           <element id="library" level="module" name="jars/mysql-connector-java-5.1.26-bin.jar" module-name="New2WebTest" />
           <element id="library" level="module" name="mysql-connector-java-5.1.26-bin.jar" module-name="New2WebTest" />
+          <element id="library" level="project" name="lib" />
         </element>
       </element>
     </root>

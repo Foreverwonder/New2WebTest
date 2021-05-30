@@ -15,6 +15,9 @@
 	<%=username %>
 	</h1>
 	<h3>只有用户权限为1的用户才能访问当前页面</h3>
+
+
+	<h3><a href="findAllStu">查看所有的学生信息</a></h3>
 	<h3>请<a href="loginout">退出系统</a>，以管理员身份登陆</h3>
 </body>
 </html>

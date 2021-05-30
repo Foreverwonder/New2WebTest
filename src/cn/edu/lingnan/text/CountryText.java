@@ -16,13 +16,13 @@ public class CountryText {
 //				System.out.println(s.getCountry_name());
 			CountryDto s=new CountryDto();
 //			s.setCountry_id("s01");
-//			s.setCountry_name("zhangsan5");
-//			s.setPeople("123");
+			s.setCountry_name("zhangsan5");
+			s.setPassword("111");
 //			s.setVac_able(1);
 //			System.out.println(sd.insertInfoToCountry(s));
 //			System.out.println(sd.updataCountryCountry_name(s));
-//			System.out.println(sd.updataCountryPeople(s));
+			System.out.println(sd.updataInfotoCountry(s));
 //			System.out.println(sd.updataCountryVac_able(s));
-			System.out.println(sd.deleteCountry("s05"));
+//			System.out.println(sd.deleteCountry("s05"));
 		}
 }

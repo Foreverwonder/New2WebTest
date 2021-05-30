@@ -19,7 +19,7 @@ public class StuFindAllServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         //1
         //2
-        CountryDao sd=new  CountryDao();
+        CountryDao sd=new CountryDao();
         Vector<CountryDto> v=sd.findAllCountry();
         HttpSession session=req.getSession();
         session.setAttribute("allStu",v);

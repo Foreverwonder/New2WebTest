@@ -22,7 +22,7 @@ public class StuUpdateServlet extends HttpServlet {
         String sname=req.getParameter("sname");
         String password=req.getParameter("password");
         String superuser=req.getParameter("superuser");
-//        String people=req.getParameter("people");
+        String people=req.getParameter("people");
         System.out.println("--------"+sid);
         //2处理业务逻辑
         CountryDao sd =new CountryDao();
@@ -31,12 +31,13 @@ public class StuUpdateServlet extends HttpServlet {
         sdto.setCountry_name(sname);
         sdto.setPassword(password);
         sdto.setVac_able(Integer.parseInt(superuser));
-//        sdto.setPeople(people);
+        sdto.setPeople(people);
         int flag=sd.updataInfotoCountry(sdto);
         Vector<CountryDto> v=sd.findAllCountry();
         HttpSession session=req.getSession();
         session.setAttribute("allStu",v);
         //3
+//        System.out.println("herer1");
         resp.sendRedirect(req.getContextPath()+"/admin/allStu.jsp");
     }
 

@@ -25,7 +25,9 @@ public class AuthorityFilter implements Filter {
 		System.out.println("The superuser's value is :"+superuser);
 		//2 根据这个superuser值进行相应的处理
 		HttpServletResponse resp=(HttpServletResponse)arg1;
-		if(superuser!=null) {
+		if(superuser!=null)
+//		if(superuser!=0)
+		{
 			if(superuser==1) {
 				//这是管理员登陆账号的处理，过滤通过
 				arg2.doFilter(arg0, arg1);
