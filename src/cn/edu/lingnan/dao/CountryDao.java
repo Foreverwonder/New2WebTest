@@ -84,6 +84,7 @@ public class CountryDao {
             while (rs.next()) {
                 CountryDto s = new CountryDto();
                 s.setCountry_id(rs.getString("country_id"));
+                s.setPassword(rs.getString("password"));
                 s.setCountry_name(rs.getString("country_name"));
                 s.setPeople(rs.getString("people"));
                 s.setVac_able(rs.getInt("vac_able"));

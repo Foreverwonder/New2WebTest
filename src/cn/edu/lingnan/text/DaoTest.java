@@ -280,10 +280,10 @@ public class DaoTest {
         Vector<CountryDto> v = new Vector<>();
         v = sd.findAllCountry();
         System.out.println("----------------所有国家信息如下--------------------------------------");
-        System.out.println("国家编号 \t国家姓名 \t\t国家人口 \t\t国家是否研发疫苗");
+        System.out.println("国家编号 \t登录密码 \t国家姓名 \t\t国家人口 \t\t国家是否研发疫苗");
         for (CountryDto s : v) {
 //            System.out.println(" \t" +s.getCountry_id() + " \t" + s.getCountry_name() + " \t\t" + s.getPeople() + " \t" + s.getVac_able());
-            System.out.printf("%-13s%-14s%-23s%-2d\n",s.getCountry_id(),s.getCountry_name(),s.getPeople(),s.getVac_able());
+            System.out.printf("%-13s%-12s%-14s%-23s%-2d\n",s.getCountry_id(),s.getPassword(),s.getCountry_name(),s.getPeople(),s.getVac_able());
         }
         System.out.println("-------------------------------------------------------------------------");
     }
