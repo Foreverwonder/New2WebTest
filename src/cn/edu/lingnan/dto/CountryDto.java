@@ -8,15 +8,10 @@ public class CountryDto {
     private String password;
     private String country_name;
     private String people;
+    private int vac_able;
 
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
+	public String getPassword() {return password; }
+	public void setPassword(String password) {this.password = password; }
     public String getCountry_id() {
         return country_id;
     }
@@ -33,22 +28,12 @@ public class CountryDto {
         this.country_name = country_name;
     }
 
-    public String getPeople() {
-        return people;
+    public String getPeople() { return people;
     }
 
-    public void setPeople(String people) {
-        this.people = people;
+    public void setPeople(String people){this.people = people;
     }
-
-    public int getVac_able() {
-        return vac_able;
+    public int getVac_able() { return vac_able; }
+    public void setVac_able(int vac_able){ this.vac_able = vac_able;
     }
-
-    public void setVac_able(int vac_able) {
-        this.vac_able = vac_able;
-    }
-
-    private int vac_able;
-
 }

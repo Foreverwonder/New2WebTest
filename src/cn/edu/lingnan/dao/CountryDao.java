@@ -44,7 +44,7 @@ public class CountryDao {
         }
         return _country_name;
     }
-    // 实现按国家名和人口进行查找，存在即返回1。
+     //实现按国家名和人口进行查找，存在即返回1。
     public boolean findCountryByNameAndPeople(String _country_name, String _people) {
         boolean flag = false;
         Connection conn = null;
@@ -67,8 +67,34 @@ public class CountryDao {
         }
         return flag;
     }
-
-
+    //为前端登陆做修改,按国家名和密码查找
+    public CountryDto findCountryByNameAndPassword(String _country_name, String _password) {
+        CountryDto sdto = new CountryDto();
+        Connection conn = null;
+        PreparedStatement prep = null;
+        ResultSet rs = null;
+        try {
+            conn = DataAccess.getConnection();
+            String sql = "select * from country where country_name=? and password =?";
+            prep = conn.prepareStatement(sql);
+            prep.setString(1, _country_name);
+            prep.setString(2, _password);
+            rs = prep.executeQuery();
+            if (rs.next()) {
+//                flag = true;
+                sdto.setCountry_id(rs.getString("country_id"));
+                sdto.setCountry_name(rs.getString("country_name"));
+                sdto.setPassword(rs.getString("password"));
+                sdto.setVac_able(rs.getInt("vac_able"));
+                sdto.setPeople(rs.getString("people"));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            DataAccess.closeConnection(conn, prep, rs);
+        }
+        return sdto;
+    }
     // 查找所有的国家信息
     public Vector<CountryDto> findAllCountry() {
         Vector<CountryDto> v = new Vector<CountryDto>();
@@ -191,7 +217,30 @@ public class CountryDao {
         }
         return flag;
     }
-
+    //更新国家表_以dto的方式全部更新
+    public int updataInfotoCountry(CountryDto _sd) {
+        int flag = 0;
+        Connection conn = null;
+        PreparedStatement prep = null;
+        ResultSet rs=null;
+        try {
+            conn = DataAccess.getConnection();
+            prep = conn.prepareStatement
+                    ("update country set country_name=?,password=?,people=?,vac_able=? where country_id=? ");
+            prep.setString(1, _sd.getCountry_name());
+            prep.setString(2, _sd.getPassword());
+            prep.setString(3, _sd.getPeople());
+            prep.setInt(4, _sd.getVac_able());
+            prep.setString(5,_sd.getCountry_id());
+            prep.executeUpdate();
+            flag = 1;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            DataAccess.closeConnection(conn, prep);
+        }
+        return flag;
+    }
 
     //删除一条国家记录
     public boolean deleteCountry(String _country_id) throws SQLException {
