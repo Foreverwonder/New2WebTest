@@ -1,18 +1,27 @@
-<%@ page language="java" contentType="text/html; charset=GBK"
-    pageEncoding="GBK"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+         pageEncoding="UTF-8"%>
 <%@ page import="java.util.*,cn.edu.lingnan.dto.CountryDto" %>
 <%@ taglib uri="/jstlc" prefix="c"%>
 
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="GBK">
-<title>显示所有学生信息</title>
+<meta charset="UTF-8">
+<script type="text/javascript" src="allstu.js"></script>
+<title>鏄剧ず鎵�鏈夊鐢熶俊鎭�</title>
+<link rel="stylesheet" type="text/css" href="table.css">
 </head>
 <body>
-    <h1>显示所有的学生信息</h1>
-    <table>
-        <tr><td>空</td><td>学生编号</td><td>学生姓名</td><td>学生密码</td><td>学生权限</td></tr>
+    <h1>瀛︾敓绠＄悊椤甸潰</h1>
+    <table class="hoverable" align="center">
+        <tr>
+            <td><input type="checkbox" onclick="allcheck(this);"></td>
+            <td>瀛︾敓缂栧彿</td>
+            <td>瀛︾敓濮撳悕</td>
+            <td>瀛︾敓瀵嗙爜</td>
+            <td>瀛︾敓鏉冮檺</td>
+            <td><input type="button"value="鎵归噺鍒犻櫎"onclick="delall();"></td>
+        </tr>
     <%
         Vector<CountryDto>v =(Vector<CountryDto>)session.getAttribute("allStu");
         Iterator<CountryDto> it=v.iterator();
@@ -23,16 +32,15 @@
     
     
     <tr>
-    
-        <td>空</td>
+        <td><input type="checkbox"name="check" value=<%=s.getCountry_id()%>></td>
         <td><%=s.getCountry_id()%></td>
         <td><%=s.getCountry_name()%></td>
         <td><%=s.getPassword()%></td>
         <td><%=s.getVac_able()%></td>
         <td><%=s.getPeople()%></td>
         <td>
-            <a href="updateStu.jsp?sid=<%=s.getCountry_id()%>">修改</a>
-            <a href="deleteStu?sid=<%=s.getCountry_id()%>">删除</a>
+            <a href="updateStu.jsp?sid=<%=s.getCountry_id()%>">淇敼</a>
+            <a href="deleteStu?sid=<%=s.getCountry_id()%>">鍒犻櫎</a>
         </td>
     </tr>
     
