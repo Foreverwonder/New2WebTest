@@ -8,29 +8,28 @@
 <script type="text/javascript" src="register.js"></script>
 </head>
 <body style="text-align: center">
-<h1>用户注册页面</h1>
+<h1>国家注册页面</h1>
 
 <%--有个js文件没写-----------------------------------------%>
 
 <form name="form" action="register">
-    <table clss="hoverable" align="center">
+    <table class="hoverable" align="center">
     <tr>
-        <td>用户编号</td>
+        <td>国家编号</td>
         <td><input type="text" name="sid" id="sid">
             <font color="red">*</font>
         </td>
     </tr>
 
         <tr>
-        
-            <td>用户名称</td>
+            <td>国家名称</td>
             <td><input type="text" name="sname" id="sname">
                 <font color="red">*</font>
             </td>
         </tr>
 
         <tr>
-            <td>用户密码</td>
+            <td>国家密码</td>
             <td><input type="password" name="password" id="password">
                 <font color="red">*</font>
             </td>
@@ -43,7 +42,7 @@
             </td>
         </tr>
         <tr>
-            <td>用户权限</td>
+            <td>国家权限</td>
             <td>
                 <select name="superuser">
                     <option Selected value="2">普通用户
@@ -52,7 +51,7 @@
             </td>
         </tr>
         <tr>
-            <td>用户邮箱</td>
+            <td>国家外交部邮箱</td>
             <td><input type="text" name="email" id="email">
                 <font color="red">*</font>
             </td>

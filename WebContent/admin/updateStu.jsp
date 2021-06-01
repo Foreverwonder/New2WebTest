@@ -6,13 +6,13 @@
 <html>
 <head>
 <meta charset="GBK">
-<title>修改学生信息</title>
+<title>修改国家信息</title>
 </head>
 <body>
-    <h1>修改学生信息</h1>
+    <h1>修改国家信息</h1>
     <form action="updateStu">
     <table>
-        <tr><td>空</td><td>学生编号</td><td>学生姓名</td><td>学生密码</td><td>学生权限</td></tr>
+        <tr><td>国家编号</td><td>国家名字</td><td>国家密码</td><td>国家权限</td></tr>
     <%
         Vector<CountryDto>v =(Vector<CountryDto>) session.getAttribute("allStu");
         Iterator<CountryDto> it=v.iterator();

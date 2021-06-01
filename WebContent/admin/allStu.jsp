@@ -2,24 +2,23 @@
          pageEncoding="UTF-8"%>
 <%@ page import="java.util.*,cn.edu.lingnan.dto.CountryDto" %>
 <%@ taglib uri="/jstlc" prefix="c"%>
-
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <script type="text/javascript" src="allstu.js"></script>
-<title>显示所有学生信息</title>
+<title>显示所有国家信息</title>
 <link rel="stylesheet" type="text/css" href="table.css">
 </head>
 <body>
-    <h1>学生管理页面</h1>
+    <h1>国家管理页面</h1>
     <table class="hoverable" align="center">
         <tr>
             <td><input type="checkbox" onclick="allcheck(this);"></td>
-            <td>学生编号</td>
-            <td>学生姓名</td>
-            <td>学生密码</td>
-            <td>学生权限</td>
+            <td>国家编号</td>
+            <td>国家名字</td>
+            <td>国家密码</td>
+            <td>国家权限</td>
             <td><input type="button"value="批量删除"onclick="delall();"></td>
         </tr>
     <%
