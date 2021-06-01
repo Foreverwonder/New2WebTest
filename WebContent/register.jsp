@@ -49,6 +49,12 @@
                     <option value="1">管理员
                 </select>
             </td>
+        </tr>、
+        <tr>
+            <td>国家人口</td>
+            <td><input type="text" name="people" id="people">
+                <font color="red">*</font>
+            </td>
         </tr>
         <tr>
             <td>国家外交部邮箱</td>

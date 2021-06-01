@@ -24,6 +24,7 @@ public class StuInsertServlet extends HttpServlet {
         String sname=req.getParameter("sname");
         String password=req.getParameter("password");
         String superuser=req.getParameter("superuser");
+        String people=req.getParameter("people");
 //        System.out.println("--------"+sid);
         //2处理业务逻辑
         CountryDao sd =new CountryDao();
@@ -32,6 +33,7 @@ public class StuInsertServlet extends HttpServlet {
         sdto.setCountry_name(sname);
         sdto.setPassword(password);
         sdto.setVac_able(Integer.parseInt(superuser));
+        sdto.setPeople(people);
         sd.insertInfoToCountry(sdto);
         //3
         resp.sendRedirect(req.getContextPath()+"/index.html");
