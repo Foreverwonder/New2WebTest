@@ -35,7 +35,7 @@
     
     
     <tr>
-        <td><input type="checkbox"name="check" value=<%=s.getCountry_id()%>></td>
+        <td><input type="checkbox" name="check" value=<%=s.getCountry_id()%>></td>
         <td><%=s.getCountry_id()%></td>
         <td><%=s.getCountry_name()%></td>
         <td><%=s.getPassword()%></td>
