@@ -322,12 +322,12 @@ public class CountryDao {
 
 
         } catch (SQLException e) {
-//            try {
-//                conn.rollback();
-//            } catch (SQLException e1) {
-//                e1.printStackTrace();
-//            }
-//            }finally {
+            try {
+                conn.rollback();
+            } catch (SQLException e1) {
+                e1.printStackTrace();
+            }
+            }finally {
             DataAccess.closeConnection(conn, prep1, rs1);
 
         }
