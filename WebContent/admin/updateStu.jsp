@@ -14,7 +14,14 @@
     <h1>修改国家信息</h1>
     <form action="updateStu">
     <table align="center">
-        <tr><td>国家编号</td><td>国家名字</td><td>国家密码</td><td>国家权限</td><td>国家人口总量</td><td>操作</td></tr>
+        <tr>
+        <td>国家编号</td>
+        <td>国家名字</td>
+        <td>国家密码</td>
+        <td>国家权限</td>
+        <td>国家人口总量</td>
+        <td>操作</td>
+        </tr>
     <%
         Vector<CountryDto>v =(Vector<CountryDto>) session.getAttribute("allStu");
         Iterator<CountryDto> it=v.iterator();

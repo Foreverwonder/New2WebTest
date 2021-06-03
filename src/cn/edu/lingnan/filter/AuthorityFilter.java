@@ -22,7 +22,7 @@ public class AuthorityFilter implements Filter {
 		HttpServletRequest req=(HttpServletRequest)arg0;
 		HttpSession session=req.getSession();
 		Integer superuser=(Integer)session.getAttribute("superuser");
-		System.out.println("The superuser's value is :"+superuser);
+//		System.out.println("The superuser's value is :"+superuser);
 		//2 根据这个superuser值进行相应的处理
 		HttpServletResponse resp=(HttpServletResponse)arg1;
 		if(superuser!=null)

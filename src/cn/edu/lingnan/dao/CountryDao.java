@@ -144,7 +144,7 @@ public class CountryDao {
             prep.setString(4, _sd.getPeople());
             prep.setInt(5, _sd.getVac_able());
             int i = prep.executeUpdate();
-            System.out.println("i=" + i);
+//            System.out.println("i=" + i);
             flag = 1;//若上方prep.executeUpdate()失败将直接跳转到catch块，flag不会被置为1
         }
         catch (SQLException e) {
@@ -261,22 +261,22 @@ public class CountryDao {
             prep1 = conn.prepareStatement(sql0);
             prep1.setString(1, _country_id);
             rs1 = prep1.executeQuery();
-            System.out.println("567567");
+//            System.out.println("567567");
 
             while (rs1.next()) {
-                System.out.println("进到这里来了267行 ");
+//                System.out.println("进到这里来了267行 ");
                 //这里已经找到s01国家所选的疫苗编号，v01，v02
                 String vac_id = rs1.getString("vac_id");
-                System.out.println("cid/country_id="+vac_id);
+//                System.out.println("cid/country_id="+vac_id);
                 //找一下这个疫苗编号对应多少条记录，如果只有一条，就删除对应的疫苗编号
                 String sql01 =
                         "select count(*) as num from c_v where vac_id=? ";
                 prep2 = conn.prepareStatement(sql01);
-                System.out.println("进到这里来了276行 ");
+//                System.out.println("进到这里来了276行 ");
                 prep2.setString(1, vac_id);
                 rs2 = prep2.executeQuery();
                 rs2.next();
-                System.out.println("进到这里来了279行 ");
+//                System.out.println("进到这里来了279行 ");
                 if (Integer.parseInt(rs2.getString("num")) == 1) {
                     System.out.println("要删除的编号：" + vac_id);
                     //找到了，用不了，先存起来
@@ -300,14 +300,14 @@ public class CountryDao {
             prep1.setString(1, _country_id);
             prep1.executeUpdate();
             prep1.close();
-            System.out.println("303行");
+//            System.out.println("303行");
             //再删国家表
             String sql2 =
                     "delete from country where country_id=?";//------------------------
             prep1 = conn.prepareStatement(sql2);
             prep1.setString(1, _country_id);
             prep1.executeUpdate();
-            System.out.println("310行");
+//            System.out.println("310行");
             //最后删疫苗表
             for (String s : v) {
                 stat = conn.createStatement();
@@ -315,7 +315,7 @@ public class CountryDao {
                         ("delete from vac where vac_id= '" + s + "'");
 //                System.out.println("316行s="+s);
             }
-            System.out.println("317行");
+//            System.out.println("317行");
             conn.commit();
             conn.setAutoCommit(true);
             flag = true;

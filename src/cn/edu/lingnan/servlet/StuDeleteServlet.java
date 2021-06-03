@@ -49,8 +49,8 @@ public class StuDeleteServlet extends HttpServlet {
         //1获取页面提交过来的学生编号
         String sid = req.getParameter("sid");
         String all = req.getParameter("flag");
-        System.out.println("Sid//=" + sid);
-        System.out.println("flag/all=" + all);
+//        System.out.println("Sid//=" + sid);
+//        System.out.println("flag/all=" + all);
         //2
         CountryDao sd=new CountryDao();
         boolean flag = false;
