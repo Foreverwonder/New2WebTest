@@ -40,7 +40,7 @@
         <td><%=s.getVac_id()%></td>
         <td><%=s.getVac_Over_Num()%></td>
         <td>
-            <input type="button" value="修改" onClick="location.href='updateC_V.jsp?vac_id=<%=s.getVac_id()%>'"class="change"/>
+            <input type="button" value="修改" onClick="location.href='updateC_V.jsp?vac_id=<%=s.getVac_id()%>&country_id=<%=s.getCountry_id()%>'"class="change"/>
             <input type="button" value="删除" onClick="location.href='deleteC_V?vac_id=<%=s.getVac_id()%>'"class="change"/>
         </td>
     </tr>
