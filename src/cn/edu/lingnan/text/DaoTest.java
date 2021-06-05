@@ -337,8 +337,12 @@ public class DaoTest {
         VacDto c = new VacDto();
         System.out.println("请输入需要新增的疫苗ID：");
         c.setVac_id(scanf.nextLine());
+        System.out.println("请输入需要新增的疫苗产地：");
+        c.setVac_area(scanf.nextLine());
         System.out.println("请输入需要新增的疫苗名称");
         c.setVac_name(scanf.nextLine());
+        System.out.println("请输入需要新增的疫苗类型");
+        c.setVac_type(scanf.nextLine());
         if (cd.insertInfoToVac(c) == 1) {
             System.out.println("新增疫苗信息成功！");
         } else

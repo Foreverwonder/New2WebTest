@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>请开始您的注册</title>
 <script type="text/javascript" src="register.js"></script>
 </head>
 <body style="text-align: center">
@@ -49,7 +49,7 @@
                     <option value="1">管理员
                 </select>
             </td>
-        </tr>、
+        </tr>
         <tr>
             <td>国家人口</td>
             <td><input type="text" name="people" id="people">

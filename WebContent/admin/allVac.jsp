@@ -51,6 +51,9 @@
     <%
         }
     %>
+    <form method="newVac" action="newVac.jsp">
+        <input type="submit" value="添加新的疫苗" style="margin-top: 25px;"></input>
+    </form>
 </table>
 </body>
 </html>
