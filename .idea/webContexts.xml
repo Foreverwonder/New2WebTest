@@ -3,6 +3,7 @@
   <component name="WebContextManager">
     <option name="state">
       <map>
+        <entry key="file://$PROJECT_DIR$/WebContent/admin/allC_V.jsp" value="file://$PROJECT_DIR$/WebContent/admin" />
         <entry key="file://$PROJECT_DIR$/WebContent/admin/allStu.jsp" value="file://$PROJECT_DIR$/WebContent/admin" />
         <entry key="file://$PROJECT_DIR$/WebContent/admin/newVac.jsp" value="file://$PROJECT_DIR$/WebContent/admin" />
       </map>

@@ -7,9 +7,9 @@
 <html>
 <head>
 <meta charset="UTF-8">
-    <script type="text/javascript" src="allvac.js"></script>//还没写
+    <script type="text/javascript" src="allvac.js"></script>
     <title>显示所有疫苗信息</title>
-    <link rel="stylesheet" type="text/css" href="allstu.css">//还没写
+    <link rel="stylesheet" type="text/css" href="allstu.css">
     <style>
 
     </style>

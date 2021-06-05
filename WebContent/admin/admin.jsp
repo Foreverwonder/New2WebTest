@@ -19,7 +19,7 @@
 
 	<h3><a href="findAllStu">查看所有国家的信息</a></h3>
 	<h3><a href="findAllVac">查看所有疫苗的信息</a></h3>
-	<h3><a href="">查看所有接种的信息</a></h3>
+	<h3><a href="findAllC_V">查看所有接种的信息</a></h3>
 
 	<h3>请<a href="loginout">退出系统</a>，以管理员身份登陆</h3>
 </body>
