@@ -25,30 +25,30 @@
         <td>接种人数</td>
         <td><input type="button"value="批量删除" style="width: 100px"class="change" onclick="delall();"></td>
     </tr>
-<%--    <%--%>
-<%--        Vector<C_VDto>v =(Vector<C_VDto>)session.getAttribute("allC_V");--%>
-<%--        Iterator<C_VDto> it=v.iterator();--%>
-<%--        C_VDto s=null;--%>
-<%--        while(it.hasNext()){--%>
-<%--            s=it.next();--%>
-<%--    %>--%>
+    <%
+        Vector<C_VDto>v =(Vector<C_VDto>)session.getAttribute("allC_V");
+        Iterator<C_VDto> it=v.iterator();
+        C_VDto s=null;
+        while(it.hasNext()){
+            s=it.next();
+    %>
 
 
-<%--    <tr>--%>
-<%--        <td><input type="checkbox" name="check" value=<%=s.getCountry_id()%>></td>--%>
-<%--        <td><%=s.getCountry_id()%></td>--%>
-<%--        <td><%=s.getVac_id()%></td>--%>
-<%--        <td><%=s.getVac_Over_Num()%></td>--%>
-<%--        <td>--%>
-<%--            <input type="button" value="修改" onClick="location.href='updateC_V.jsp?vac_id=<%=s.getVac_id()%>'"class="change"/>--%>
-<%--            <input type="button" value="删除" onClick="location.href='deleteC_V?vac_id=<%=s.getVac_id()%>'"class="change"/>--%>
-<%--        </td>--%>
-<%--    </tr>--%>
+    <tr>
+        <td><input type="checkbox" name="check" value=<%=s.getCountry_id()%>></td>
+        <td><%=s.getCountry_id()%></td>
+        <td><%=s.getVac_id()%></td>
+        <td><%=s.getVac_Over_Num()%></td>
+        <td>
+            <input type="button" value="修改" onClick="location.href='updateC_V.jsp?vac_id=<%=s.getVac_id()%>'"class="change"/>
+            <input type="button" value="删除" onClick="location.href='deleteC_V?vac_id=<%=s.getVac_id()%>'"class="change"/>
+        </td>
+    </tr>
 
     <%
         }
     %>
-    <form method="newVac" action="newVac.jsp">
+    <form method="newVac" action="allC_V.jsp">
         <input type="submit" value="添加新的疫苗" style="margin-top: 25px;"></input>
     </form>
 </table>
