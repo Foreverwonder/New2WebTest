@@ -453,7 +453,7 @@ public class DaoTest {
         if (cd.deleteVac(_vac_id) == true) {
             System.out.println("删除疫苗信息成功");
         } else
-            System.out.println("删除疫苗信息失败");
+            System.out.println("有国家正在使用此款疫苗，不建议删除。");
     }
     //----------------------删除接种情况（三级菜单）------------------------------------------
     public static void deleteC_V() throws SQLException {

@@ -33,8 +33,8 @@ function delall() {
     }
     if (flag == true) {
         if (confirm("您确定要删除这些记录吗?删除后将不能恢复哦!")) {
-            location.href = "deleteVac?flag=all&vac=" + allvac;
-            // alert(allsid)
+            location.href = "deleteVac?flag=all&vac_id=" + allvac;
+            // alert(allvac)
         }
 
     }else {

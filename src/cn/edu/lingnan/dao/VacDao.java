@@ -144,7 +144,9 @@ public class VacDao {
                 prep1 = conn.prepareStatement(sql1);
                 prep1.setString(1, _vac_id);
                 prep1.executeUpdate();
-                flag = true;
+                if(_vac_id!=null){
+                    flag = true;
+                }
             }
             prep1.close();
         } catch (SQLException throwables) {
