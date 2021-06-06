@@ -4,16 +4,23 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>疫苗添加页面</title>
+    <title>接种信息添加页面</title>
     <script type="text/javascript" src="register.js"></script>
 </head>
 <body style="text-align: center">
-<h1>疫苗添加页面</h1>
+<h1>疫接种信息页面</h1>
 
 <%--有个js文件没写-----------------------------------------%>
 
-<form name="form" action="newVac" target="_blank">
+<form name="form" action="newC_V">
     <table class="hoverable" align="center">
+        <tr>
+            <td>国家编号</td>
+            <td><input type="text" name="country_id" id="country_id">
+                <font color="red">*</font>
+            </td>
+        </tr>
+
         <tr>
             <td>疫苗编号</td>
             <td><input type="text" name="vac_id" id="vac_id">
@@ -22,29 +29,15 @@
         </tr>
 
         <tr>
-            <td>疫苗产地</td>
-            <td><input type="text" name="vac_area" id="vac_area">
-                <font color="red">*</font>
-            </td>
-        </tr>
-
-        <tr>
-            <td>疫苗名称</td>
-            <td><input type="text" name="vac_name" id="vac_name">
-                <font color="red">*</font>
-            </td>
-        </tr>
-
-        <tr>
-            <td>疫苗类型</td>
-            <td><input type="text" name="vac_type" id="vac_type">
+            <td>接种人数</td>
+            <td><input type="text" name="vac_over_num" id="vac_over_num">
                 <font color="red">*</font>
             </td>
         </tr>
 
         <tr>
             <td colspan="2" align="center">
-                <input type="submit" value="注册" onclick="return ;"/>
+                <input type="submit" value="添加" onclick="return ;"/>
                 <input type="Reset" value="取消"/>
             </td>
         </tr>

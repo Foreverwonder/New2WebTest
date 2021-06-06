@@ -48,8 +48,8 @@
     <%
         }
     %>
-    <form method="newVac" action="allC_V.jsp">
-        <input type="submit" value="添加新的疫苗" style="margin-top: 25px;"></input>
+    <form method="newVac" action="newC_V.jsp" target="_blank">
+        <input type="submit" value="添加新的接种信息" style="margin-top: 25px;"></input>
     </form>
 </table>
 </body>

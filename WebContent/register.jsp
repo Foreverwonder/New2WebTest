@@ -12,7 +12,7 @@
 
 <%--有个js文件没写-----------------------------------------%>
 
-<form name="form" action="register">
+<form name="form" action="register" target="_blank">
     <table class="hoverable" align="center">
     <tr>
         <td>国家编号</td>
