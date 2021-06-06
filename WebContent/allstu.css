@@ -1,0 +1,33 @@
+@charset "UTF-8";
+h1{
+    text-align: center;
+    color: rgb(215,253,249);
+}
+body{
+    background-color: rgb(255,157,168);//#cecece;
+}
+.change{
+    /*color: rgb(215,253,249);*/
+    /*text-decoration: none;*/
+    background-color: rgba(0,0,0,0.01);
+}
+table{
+    /*border: solid;*/
+    /*solid-color: red;*/
+}
+tr{
+
+}
+td{
+    background-color:rgba(232,229,238,0.5);
+    /*margin: 100px 5px ;*/
+    width: 160px;
+    text-align: center;
+}
+/*input[type="checkbox"]{*/
+/*    background-color: red;*/
+/*}*/
+input[type="text"]{
+    background: rgba(0,0,0,0.01);
+    text-align: center;
+}

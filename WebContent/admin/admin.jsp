@@ -5,6 +5,11 @@
 <head>
 <meta charset="GBK">
 <title>管理员页面</title>
+	<script>
+		function replaceDoc(){
+			window.location.replace("http://localhost:8889/New2WebTest/")
+		}
+	</script>
 </head>
 <body onload="opener.Location.reload()">
 <!--<body onload="opener.Location.replace()">-->
@@ -22,6 +27,6 @@
 	<h3><a href="findAllC_V">查看所有接种的信息</a></h3>
 
 	<h3>想<a href="loginout" target="_blank">退出系统</a></h3>
-
+<%--<input type="button" value="退出" onclick="replaceDoc()">--%>
 </body>
 </html>

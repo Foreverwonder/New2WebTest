@@ -48,9 +48,11 @@
     <%
         }
     %>
+    <div>
     <form method="newVac" action="newC_V.jsp" target="_blank">
         <input type="submit" value="添加新的接种信息" style="margin-top: 25px;"></input>
     </form>
+        </div>
 </table>
 </body>
 </html>

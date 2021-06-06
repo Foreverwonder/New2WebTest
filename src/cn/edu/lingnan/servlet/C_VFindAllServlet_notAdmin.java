@@ -1,9 +1,7 @@
 package cn.edu.lingnan.servlet;
 
-import cn.edu.lingnan.dao.C_VDao;
-import cn.edu.lingnan.dao.VacDao;
-import cn.edu.lingnan.dto.C_VDto;
-import cn.edu.lingnan.dto.VacDto;
+import java.io.IOException;
+import java.util.Vector;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -11,12 +9,12 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import java.io.IOException;
-import java.util.Vector;
 
-@WebServlet("/admin/findAllC_V")
-public class C_VFindAllServlet extends HttpServlet {
-    @Override
+import cn.edu.lingnan.dao.C_VDao;
+import cn.edu.lingnan.dto.C_VDto;
+@WebServlet("/findAllC_V")
+public class C_VFindAllServlet_notAdmin extends HttpServlet {
+	@Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         //1
         //2
@@ -26,7 +24,7 @@ public class C_VFindAllServlet extends HttpServlet {
         session.setAttribute("allC_V",v);
         //3
 
-        resp.sendRedirect(req.getContextPath()+"/admin/allC_V.jsp");
+        resp.sendRedirect(req.getContextPath()+"/allC_V.jsp");
     }
 
     @Override
