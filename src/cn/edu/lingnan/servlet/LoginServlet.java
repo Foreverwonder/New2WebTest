@@ -14,7 +14,6 @@ import cn.edu.lingnan.dto.CountryDto;
 
 //@WebServlet("/login")相当于web.xml文件里的最后一大段
 public class LoginServlet extends HttpServlet {
-
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) 
 			throws ServletException, IOException {
@@ -44,8 +43,8 @@ public class LoginServlet extends HttpServlet {
 		if(superuser!=0)
 //		if(true)
 		{
-//			resp.sendRedirect(req.getContextPath()+"/ok.html");
-			resp.sendRedirect(req.getContextPath()+"/ok.jsp");
+//			resp.sendRedirect(req.getContextPath()+"/ok.jsp");
+			resp.sendRedirect(req.getContextPath()+"/index0.jsp");
 		}
 		else
 			resp.sendRedirect(req.getContextPath()+"/index.html");

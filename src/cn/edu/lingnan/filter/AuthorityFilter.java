@@ -38,7 +38,7 @@ public class AuthorityFilter implements Filter {
 			
 		}else {
 			//这是用户没有登陆的情况
-			resp.sendRedirect(req.getContextPath()+"/index.html");
+			resp.sendRedirect(req.getContextPath()+"/index0.jsp");
 		}
 	}
 

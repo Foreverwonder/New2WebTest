@@ -8,7 +8,7 @@
     <script type="text/javascript" src="register.js"></script>
 </head>
 <body style="text-align: center">
-<h1>疫接种信息页面</h1>
+<h1>接种信息页面</h1>
 
 <%--有个js文件没写-----------------------------------------%>
 
