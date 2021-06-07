@@ -21,9 +21,9 @@
  </div>
  <div class="fr top-link">
 <%--     <h1>疫情疫苗信息管理系统</h1>--%>
-     <a class="abc">Covid_19疫情疫苗信息管理系统</a>
+     <a class="abc">Covid_19全球疫苗信息管理系统</a>
      <a href="#" target="_blank" title="访问站点"><i class="shopLinkIcon"></i><span>访问站点</span></a>
-  <a href="admin_list.html" target="mainCont" title="DeathGhost"><i class="adminIcon"></i><span>管理员：
+  <a href="admin_list.html" target="mainCont" title="DeathGhost"><i class="adminIcon"></i><span>当前国家：
   <%
 			String username =(String)session.getAttribute("username");
 		%>
@@ -31,7 +31,7 @@
   </span></a>
   <a href="#" title="修改密码"><i class="clearIcon"></i><span>清除缓存</span></a>
   <a href="revise_password.html" target="mainCont" title="修改密码"><i class="revisepwdIcon"></i><span>修改密码</span></a>
-  <a href="loginout" title="安全退出" style="background:rgb(60,60,60);" target="_blank"><i class="quitIcon"></i><span>安全退出？</span></a>
+  <a href="loginout" title="安全退出" style="background:rgb(255,0,128);" target="_blank"><i class="quitIcon"></i><span>安全退出？</span></a>
  </div>
 </div>
 </body>

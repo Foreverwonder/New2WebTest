@@ -38,7 +38,7 @@ input,button,select,img{vertical-align:middle;}
 .loginform li input::-moz-placeholder {color: #fff !important;}
 .loginform li input:-ms-input-placeholder {color: #fff !important;}
 /*start*/
-.header{background:#3d3d3d;color:#fff;height:75px;border-bottom:1px #383838 solid;}
+.header{background:#3d3d3d;color:#fff;height:75px;border-bottom:1px #383838 solid;background-color: rgb(255,0,128)}
 .logo{float:left;margin:0 20px;}
 .logo img{height:75px;}
 .top-link{height:75px;line-height:75px;}
@@ -54,7 +54,7 @@ input,button,select,img{vertical-align:middle;}
 /*menu*/
 .menu-list{color:black;background-color:rgb(255,157,168);}
 .menu-list-title{background-color:rgb(243,193,203);font-size:14px;font-weight:bold;height:45px;line-height:45px;padding-left:5px;border-bottom:1px #666666 solid;cursor:pointer;}
-.menu-list-title i{float:right;position:relative;right:5px;top:4px;color:#666666;}
+.menu-list-title i{float:right;position:relative;right:5px;top:4px;color:rgb(255,0,128);}
 .menu-children li{height:45px;line-height:45px;overflow:hidden;border-bottom:1px #494948 dotted;padding-left:2em;}
 .menu-children li:hover{background:rgba(254,120,109,0.5);}
 .menu-children li a{color:black;display:block;}
