@@ -6,6 +6,8 @@
     <meta charset="UTF-8">
     <title>疫苗添加页面</title>
     <script type="text/javascript" src="register.js"></script>
+    <link rel="stylesheet" type="text/css" href="allstu.css">
+
 </head>
 <body style="text-align: center">
 <h1>疫苗添加页面</h1>

@@ -6,6 +6,8 @@
     <meta charset="UTF-8">
     <title>接种信息添加页面</title>
     <script type="text/javascript" src="register.js"></script>
+    <link rel="stylesheet" type="text/css" href="allstu.css">
+
 </head>
 <body style="text-align: center">
 <h1>接种信息页面</h1>

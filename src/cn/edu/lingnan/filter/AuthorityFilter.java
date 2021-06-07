@@ -33,7 +33,7 @@ public class AuthorityFilter implements Filter {
 				arg2.doFilter(arg0, arg1);
 			}else {
 				//这是普通用户登录账号的处理
-				resp.sendRedirect(req.getContextPath()+"/authority.html");
+				resp.sendRedirect(req.getContextPath()+"/authority.jsp");
 			}
 			
 		}else {

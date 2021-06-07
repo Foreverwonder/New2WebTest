@@ -6,6 +6,8 @@
 <meta charset="UTF-8">
 <title>请开始您的注册</title>
 <script type="text/javascript" src="register.js"></script>
+    <link rel="stylesheet" type="text/css" href="allstu.css">
+
 </head>
 <body style="text-align: center">
 <h1>国家注册页面</h1>
@@ -29,15 +31,15 @@
         </tr>
 
         <tr>
-            <td>国家密码</td>
-            <td><input type="password" name="password" id="password">
+            <td >国家密码</td>
+            <td ><input type="password" name="password" id="password" style="background-color: rgb(243,193,203)">
                 <font color="red">*</font>
             </td>
         </tr>
 
         <tr>
             <td>确认密码</td>
-            <td><input type="password" name="password2" id="password2">
+            <td><input type="password" name="password2" id="password2"style="background-color: rgb(243,193,203)">
                 <font color="red">*</font>
             </td>
         </tr>
