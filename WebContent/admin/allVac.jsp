@@ -80,8 +80,8 @@
 <%--    --%>
 </table>
 <div style="margin-left:9%">
-    <form method="newVac" action="newC_V.jsp" target="_blank" >
-        <input type="submit" value="添加新的接种信息" style="margin-top: 30px;"></input>
+    <form method="neVacwVac" action="newVac.jsp" target="_blank" >
+        <input type="submit" value="添加新的疫苗信息" style="margin-top: 30px;"></input>
     </form>
 </div>
 </body>
