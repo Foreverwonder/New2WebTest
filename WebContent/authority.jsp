@@ -20,7 +20,7 @@
 </h1>
 <h1 style="color: rgb(255,0,128)">权限不足，禁止访问!</h1>
 <!--	<h3>当用户权限不为1时，访问admin.html时跳转至此</h3>-->
-<h3><a href="loginout" target="_blank" style="color:rgb(255,0,128)">退出系统</a>，以管理员身份登陆</h3>
+<h3>请在普通用户页面浏览，<br>或<a href="loginout" target="_blank" style="color:rgb(255,0,128)">退出系统</a>，以管理员身份登陆</h3>
 </body>
 </html>
 

@@ -31,7 +31,7 @@
 <h3><a href="findAllVac" style="color:rgb(255,0,128)">查看所有疫苗的信息</a></h3>
 <h3><a href="findAllC_V" style="color:rgb(255,0,128)">查看所有接种的信息</a></h3>
 
-<h3><a href="loginout" target="_blank" style="text-decoration: none;color:rgb(255,0,128)">退出系统</a></h3>
+<%--<h3><a href="loginout" target="_blank" style="text-decoration: none;color:rgb(255,0,128)">退出系统</a></h3>--%>
 <h4 style="color: rgb(255,227,227)">只有能够生产疫苗的国家才能访问当前页面</h4>
 <%--<input type="button" value="退出" onclick="replaceDoc()">--%>
 </body>
