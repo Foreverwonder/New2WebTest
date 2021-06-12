@@ -32,7 +32,7 @@
   </span></a>
         <a href="#" title="修改密码"><i class="clearIcon"></i><span>清除缓存</span></a>
         <a href="revise_password.html" target="mainCont" title="修改密码"><i class="revisepwdIcon"></i><span>修改密码</span></a>
-        <a href="loginout" title="安全退出" style="background:rgb(255,0,128);" target="_blank"><i
+        <a href="loginout" title="安全退出" style="background:rgb(255,0,128);" target="_parent"><i
                 class="quitIcon"></i><span>安全退出？</span></a>
     </div>
 </div>

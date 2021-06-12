@@ -23,7 +23,7 @@ body{
 	<h3><a href="admin/admin.jsp" style="color:rgb(255,0,128)">进入管理员页面</a></h3>
 <%--	<h3>请<a href="http://localhost:8889/New2WebTest/">退出系统</a></h3>--%>
 <%--	<h3><a href="javascript:window.history.back(-1);" rel="" class="ddBtn btnWhite">退出系统</a></h3>&lt;%&ndash;笑死&ndash;%&gt;--%>
-	<h3><a href="loginout" target="_blank" style="color:rgb(255,0,128)">退出系统</a></h3>
+	<h3><a href="loginout" target="_parent" style="color:rgb(255,0,128)">退出系统</a></h3>
 
 </body>
 </html>
