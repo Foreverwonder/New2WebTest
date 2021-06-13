@@ -130,7 +130,7 @@ public class VacDao {
         ResultSet rs2 = null;
         try {
             conn = DataAccess.getConnection();
-            //----------通过国家编号找到待删除的疫苗，存入动态数组中------------------------
+            //----------通过疫苗编号找到待删除的接种记录，存入动态数组中------------------------
 //            Vector<String> v = new Vector<String>();
             String sql0 =
                     "select count(*) as num from c_v where vac_id=?";

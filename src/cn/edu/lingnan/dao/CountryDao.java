@@ -44,7 +44,8 @@ public class CountryDao {
         }
         return _country_name;
     }
-     //实现按国家名和人口进行查找，存在即返回1。
+
+    //实现按国家名和人口进行查找，存在即返回1。
     public boolean findCountryByNameAndPeople(String _country_name, String _people) {
         boolean flag = false;
         Connection conn = null;
@@ -67,6 +68,7 @@ public class CountryDao {
         }
         return flag;
     }
+
     //为前端登陆做修改,按国家名和密码查找
     public CountryDto findCountryByNameAndPassword(String _country_name, String _password) {
         CountryDto sdto = new CountryDto();
@@ -95,6 +97,7 @@ public class CountryDao {
         }
         return sdto;
     }
+
     // 查找所有的国家信息
     public Vector<CountryDto> findAllCountry() {
         Vector<CountryDto> v = new Vector<CountryDto>();
@@ -146,8 +149,7 @@ public class CountryDao {
             int i = prep.executeUpdate();
 //            System.out.println("i=" + i);
             flag = 1;//若上方prep.executeUpdate()失败将直接跳转到catch块，flag不会被置为1
-        }
-        catch (SQLException e) {
+        } catch (SQLException e) {
             e.printStackTrace();
         } finally {
             DataAccess.closeConnection(conn, prep, rs);
@@ -218,12 +220,13 @@ public class CountryDao {
         }
         return flag;
     }
+
     //更新国家表_以dto的方式全部更新
     public int updataInfotoCountry(CountryDto _sd) {
         int flag = 0;
         Connection conn = null;
         PreparedStatement prep = null;
-        ResultSet rs=null;
+        ResultSet rs = null;
         try {
             conn = DataAccess.getConnection();
             prep = conn.prepareStatement
@@ -232,7 +235,7 @@ public class CountryDao {
             prep.setString(2, _sd.getPassword());
             prep.setString(3, _sd.getPeople());
             prep.setInt(4, _sd.getVac_able());
-            prep.setString(5,_sd.getCountry_id());
+            prep.setString(5, _sd.getCountry_id());
             prep.executeUpdate();
             flag = 1;
         } catch (SQLException e) {
@@ -261,22 +264,17 @@ public class CountryDao {
             prep1 = conn.prepareStatement(sql0);
             prep1.setString(1, _country_id);
             rs1 = prep1.executeQuery();
-//            System.out.println("567567");
 
             while (rs1.next()) {
-//                System.out.println("进到这里来了267行 ");
                 //这里已经找到s01国家所选的疫苗编号，v01，v02
                 String vac_id = rs1.getString("vac_id");
-//                System.out.println("cid/country_id="+vac_id);
                 //找一下这个疫苗编号对应多少条记录，如果只有一条，就删除对应的疫苗编号
                 String sql01 =
                         "select count(*) as num from c_v where vac_id=? ";
                 prep2 = conn.prepareStatement(sql01);
-//                System.out.println("进到这里来了276行 ");
                 prep2.setString(1, vac_id);
                 rs2 = prep2.executeQuery();
                 rs2.next();
-//                System.out.println("进到这里来了279行 ");
                 if (Integer.parseInt(rs2.getString("num")) == 1) {
                     System.out.println("要删除的编号：" + vac_id);
                     //找到了，用不了，先存起来
@@ -313,9 +311,7 @@ public class CountryDao {
                 stat = conn.createStatement();
                 stat.executeUpdate
                         ("delete from vac where vac_id= '" + s + "'");
-//                System.out.println("316行s="+s);
             }
-//            System.out.println("317行");
             conn.commit();
             conn.setAutoCommit(true);
             flag = true;
@@ -327,7 +323,7 @@ public class CountryDao {
             } catch (SQLException e1) {
                 e1.printStackTrace();
             }
-            }finally {
+        } finally {
             DataAccess.closeConnection(conn, prep1, rs1);
 
         }

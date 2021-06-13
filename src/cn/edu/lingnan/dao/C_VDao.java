@@ -24,7 +24,8 @@ public class C_VDao {
 		ResultSet rs = null;
 		try {
 			conn = DataAccess.getConnection();
-			String sql = "select * from c_v";
+//			String sql = "select * from c_v";
+			String sql = "select * from c_v where isdelete=0";
 			prep = conn.prepareStatement(sql);
 			rs = prep.executeQuery();
 			while (rs.next()) {
@@ -171,7 +172,8 @@ public class C_VDao {
 		try {
 			conn = DataAccess.getConnection();
 			String sql0 =
-					"delete from c_v where country_id=? and vac_id=?";
+//					"delete from c_v where country_id=? and vac_id=?";
+					"update c_v set isdelete =1 where country_id=? and vac_id=?";
 			prep1 = conn.prepareStatement(sql0);
 			prep1.setString(1, _country_id);
 			prep1.setString(2, _vac_id);
