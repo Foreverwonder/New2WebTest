@@ -65,7 +65,8 @@ public class VacDao {
             Class.forName("com.mysql.jdbc.Driver");
             conn = DataAccess.getConnection();
             String sql =
-                    "insert into vac values(?,?,?,?)";
+//                    "insert into vac values(?,?,?,?)";
+                    "insert into vac values(?,?,?,?,0)";
             prep = conn.prepareStatement(sql);
             prep.setString(1, _cd.getVac_id());
             prep.setString(2, _cd.getVac_area());
@@ -175,7 +176,6 @@ public class VacDao {
                 c.setVac_area(rs.getString("vac_area"));
                 c.setVac_name(rs.getString("vac_name"));
                 c.setVac_type(rs.getString("vac_type"));
-
                 v.add(c);
             }
         } catch (SQLException e) {

@@ -139,7 +139,8 @@ public class CountryDao {
         try {
             conn = DataAccess.getConnection();
             String sql =
-                    "insert into country values(?,?,?,?,?)";//一条语句写错两处地方。。。
+//                    "insert into country values(?,?,?,?,?)";//
+                    "insert into country values(?,?,?,?,?,0)";//
             prep = conn.prepareStatement(sql);
             prep.setString(1, _sd.getCountry_id());
             prep.setString(2, _sd.getPassword());

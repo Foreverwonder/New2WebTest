@@ -21,7 +21,6 @@ public class VacInsertServlet extends HttpServlet {
         String vac_area=req.getParameter("vac_area");
         String vac_name=req.getParameter("vac_name");
         String vac_type=req.getParameter("vac_type");
-//        System.out.println("--------"+sid);
         //2处理业务逻辑
         VacDao sd =new VacDao();
         VacDto sdto= new VacDto();

@@ -20,15 +20,15 @@ public class StuInsertServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
         //1获取页面提交的参数
-        String sid=req.getParameter("sid");
-        String sname=req.getParameter("sname");
-        String password=req.getParameter("password");
-        String superuser=req.getParameter("superuser");
-        String people=req.getParameter("people");
+        String sid = req.getParameter("sid");
+        String sname = req.getParameter("sname");
+        String password = req.getParameter("password");
+        String superuser = req.getParameter("superuser");
+        String people = req.getParameter("people");
 //        System.out.println("--------"+sid);
         //2处理业务逻辑
-        CountryDao sd =new CountryDao();
-        CountryDto sdto= new CountryDto();
+        CountryDao sd = new CountryDao();
+        CountryDto sdto = new CountryDto();
         sdto.setCountry_id(sid);
         sdto.setCountry_name(sname);
         sdto.setPassword(password);
@@ -36,7 +36,7 @@ public class StuInsertServlet extends HttpServlet {
         sdto.setPeople(people);
         sd.insertInfoToCountry(sdto);
         //3
-        resp.sendRedirect(req.getContextPath()+"/index.html");
+        resp.sendRedirect(req.getContextPath() + "/index.html");
     }
 
     @Override

@@ -123,7 +123,8 @@ public class C_VDao {
 			rs.close();
 			prep.close();
 			if (flagCountry == 1 && flagVac == 1) {// 意味着可以执行插入操作
-				String sql = "insert into c_v values(?,?,?)";// 一条语句写错两处地方。。。
+//				String sql = "insert into c_v values(?,?,?)";// 一条语句写错两处地方。。。
+				String sql = "insert into c_v values(?,?,?,0)";// 一条语句写错两处地方。。。
 				prep = conn.prepareStatement(sql);
 				prep.setString(1, _country_id);
 				prep.setString(2, _vac_id);
