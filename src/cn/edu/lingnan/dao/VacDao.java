@@ -133,14 +133,15 @@ public class VacDao {
             //----------通过疫苗编号找到待删除的接种记录，存入动态数组中------------------------
 //            Vector<String> v = new Vector<String>();
             String sql0 =
-                    "select count(*) as num from c_v where vac_id=?";
+//                    "select count(*) as num from c_v where vac_id=?";
+                    "select count(*) as num from c_v where isdelete=0 and vac_id=?";
             prep1 = conn.prepareStatement(sql0);
             prep1.setString(1, _vac_id);
             rs1 = prep1.executeQuery();
             rs1.next();
             if (Integer.parseInt(rs1.getString("num")) == 0) {
-//                System.out.println("要删除的疫苗号：" + _vac_id);
-                String sql1 = "delete from vac where vac_id=?";
+//                String sql1 = "delete from vac where vac_id=?";
+                String sql1 = "update vac set isdelete=1 where vac_id=?";
                 prep1 = conn.prepareStatement(sql1);
                 prep1.setString(1, _vac_id);
                 prep1.executeUpdate();
@@ -165,7 +166,7 @@ public class VacDao {
         ResultSet rs = null;
         try {
             conn = DataAccess.getConnection();
-            String sql = "select * from vac";
+            String sql = "select * from vac where isdelete=0";
             prep = conn.prepareStatement(sql);
             rs = prep.executeQuery();
             while (rs.next()) {

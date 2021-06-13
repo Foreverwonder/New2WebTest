@@ -107,7 +107,7 @@ public class CountryDao {
         ResultSet rs = null;
         try {
             conn = DataAccess.getConnection();
-            String sql = "select * from country";
+            String sql = "select * from country where isdelete=0";
             prep = conn.prepareStatement(sql);
             rs = prep.executeQuery();
             while (rs.next()) {
@@ -260,7 +260,8 @@ public class CountryDao {
             //----------通过国家编号找到待删除的疫苗，存入动态数组中------------------------
             Vector<String> v = new Vector<String>();
             String sql0 =
-                    "select * from vac where vac_id=?";
+//                    "select * from vac where vac_id=?";
+                    "select * from vac where isdelete=1 and vac_id=?";
             prep1 = conn.prepareStatement(sql0);
             prep1.setString(1, _country_id);
             rs1 = prep1.executeQuery();
@@ -270,7 +271,8 @@ public class CountryDao {
                 String vac_id = rs1.getString("vac_id");
                 //找一下这个疫苗编号对应多少条记录，如果只有一条，就删除对应的疫苗编号
                 String sql01 =
-                        "select count(*) as num from c_v where vac_id=? ";
+//                        "select count(*) as num from c_v where vac_id=? ";
+                        "select count(*) as num from c_v where isdelete=1 and vac_id=? ";
                 prep2 = conn.prepareStatement(sql01);
                 prep2.setString(1, vac_id);
                 rs2 = prep2.executeQuery();
@@ -293,7 +295,8 @@ public class CountryDao {
             conn.setAutoCommit(false);
             //先删接种情况表
             String sql1 =
-                    "delete from c_v where country_id=?";
+//                    "delete from c_v where country_id=?";
+                    "update c_v set isdelete=1 where country_id=?";
             prep1 = conn.prepareStatement(sql1);
             prep1.setString(1, _country_id);
             prep1.executeUpdate();
@@ -301,7 +304,8 @@ public class CountryDao {
 //            System.out.println("303行");
             //再删国家表
             String sql2 =
-                    "delete from country where country_id=?";//------------------------
+//                    "delete from country where country_id=?";//------------------------
+                    "update country set isdelete=1 where country_id=?";//------------------------
             prep1 = conn.prepareStatement(sql2);
             prep1.setString(1, _country_id);
             prep1.executeUpdate();
@@ -310,7 +314,8 @@ public class CountryDao {
             for (String s : v) {
                 stat = conn.createStatement();
                 stat.executeUpdate
-                        ("delete from vac where vac_id= '" + s + "'");
+//                        ("delete from vac where vac_id= '" + s + "'");
+                        ("update vac set isdelete=1 where vac_id= '" + s + "'");
             }
             conn.commit();
             conn.setAutoCommit(true);

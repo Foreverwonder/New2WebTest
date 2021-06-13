@@ -25,7 +25,6 @@ public class C_VFindAllServlet extends HttpServlet {
         HttpSession session=req.getSession();
         session.setAttribute("allC_V",v);
         //3
-
         resp.sendRedirect(req.getContextPath()+"/admin/allC_V.jsp");
     }
 
