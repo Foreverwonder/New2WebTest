@@ -21,7 +21,7 @@
     </div>
     <div class="fr top-link">
         <%--     <h1>疫情疫苗信息管理系统</h1>--%>
-        <a class="abc">Covid_19全球疫苗信息管理系统</a>
+        <a class="abc">联合国疫苗信息管理系统</a>
         <a href="#" target="_blank" title="访问站点"><i class="shopLinkIcon"></i><span>访问站点</span></a>
         <a href="admin_list.html" target="mainCont" title="DeathGhost"><i class="adminIcon"></i><span>当前国家：
   <%

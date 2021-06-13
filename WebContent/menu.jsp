@@ -19,7 +19,7 @@
 
 
         <li class="menu-list-title">
-            <span>普通用户页面</span>
+            <span>普通国家页面</span>
             <i>◢</i>
         </li>
         <li>
@@ -37,7 +37,7 @@
         %>
 
         <li class="menu-list-title">
-            <span>管理员页面</span>
+            <span>大国管理页面</span>
             <i>◢</i>
         </li>
         <li>
