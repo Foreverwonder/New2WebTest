@@ -8,6 +8,15 @@ public class VacDto {
     private String vac_area;//add
     private String vac_name;
     private String vac_type;//add
+    private int isdelete;
+
+    public int getIsdelete() {
+        return isdelete;
+    }
+
+    public void setIsdelete(int isdelete) {
+        this.isdelete = isdelete;
+    }
 
     public String getVac_area() {
         return vac_area;

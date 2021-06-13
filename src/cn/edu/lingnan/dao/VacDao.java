@@ -159,8 +159,36 @@ public class VacDao {
         return flag;
     }
 
-    // 查找所有的疫苗信息（改）
+    // 查找所有的疫苗信息
     public Vector<VacDto> findAllVac() {
+        Vector<VacDto> v = new Vector<>();
+        Connection conn = null;
+        PreparedStatement prep = null;
+        ResultSet rs = null;
+        try {
+            conn = DataAccess.getConnection();
+            String sql = "select * from vac";
+            prep = conn.prepareStatement(sql);
+            rs = prep.executeQuery();
+            while (rs.next()) {
+                VacDto c = new VacDto();
+                c.setVac_id(rs.getString("vac_id"));
+                c.setVac_area(rs.getString("vac_area"));
+                c.setVac_name(rs.getString("vac_name"));
+                c.setVac_type(rs.getString("vac_type"));
+                c.setIsdelete(rs.getInt("isdelete"));
+                v.add(c);
+            }
+        } catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        } finally {
+            DataAccess.closeConnection(conn, prep, rs);
+        }
+        return v;
+    }
+    // 查找所有的疫苗信息_非全部！!----------------------------
+    public Vector<VacDto> findAllVac_isdelete() {
         Vector<VacDto> v = new Vector<>();
         Connection conn = null;
         PreparedStatement prep = null;

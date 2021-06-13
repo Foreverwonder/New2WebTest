@@ -53,7 +53,6 @@ public class VacDeleteServlet extends HttpServlet {
             Vector<VacDto> v = sd.findAllVac();
             HttpSession session = req.getSession();
             session.setAttribute("allVac", v);
-//            System.out.println("52??=" + flag);
 //        }
 
             //3

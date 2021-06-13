@@ -24,7 +24,8 @@ public class VacUpdateServlet extends HttpServlet {
         String vac_area=req.getParameter("vac_area");
         String vac_name=req.getParameter("vac_name");
         String vac_type=req.getParameter("vac_type");
-        System.out.println("--------"+vac_id);
+        String isdelete=req.getParameter("isdelete");
+//        System.out.println("--------"+vac_id);
         //2处理业务逻辑
         VacDao sd =new VacDao();
         VacDto sdto= new VacDto();
@@ -32,6 +33,7 @@ public class VacUpdateServlet extends HttpServlet {
         sdto.setVac_area(vac_area);
         sdto.setVac_name(vac_name);
         sdto.setVac_type(vac_type);
+        sdto.setIsdelete(Integer.parseInt(isdelete));
         int flag=sd.updataVac(sdto);
         Vector<VacDto> v=sd.findAllVac();
         HttpSession session=req.getSession();

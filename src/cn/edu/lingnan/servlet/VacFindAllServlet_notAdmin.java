@@ -12,18 +12,22 @@ import javax.servlet.http.HttpSession;
 
 import cn.edu.lingnan.dao.VacDao;
 import cn.edu.lingnan.dto.VacDto;
+
 @WebServlet("/findAllVac")
 public class VacFindAllServlet_notAdmin extends HttpServlet {
-	@Override
+    @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         //1
         //2
-        VacDao vd=new VacDao();
-        Vector<VacDto> v=vd.findAllVac();
-        HttpSession session=req.getSession();
-        session.setAttribute("allVac",v);
+        VacDao vd = new VacDao();
+//        Vector<VacDto> v=vd.findAllVac();
+        Vector<VacDto> v = vd.findAllVac_isdelete();
+        HttpSession session = req.getSession();
+//        session.setAttribute("allVac",v);
+        session.setAttribute("allVac_isdelete", v);
+
         //3
-        resp.sendRedirect(req.getContextPath()+"/allVac.jsp");
+        resp.sendRedirect(req.getContextPath() + "/allVac.jsp");
     }
 
     @Override

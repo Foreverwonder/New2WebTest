@@ -39,6 +39,7 @@
         <td>疫苗产地</td>
         <td>疫苗名称</td>
         <td>疫苗类型</td>
+        <td>isdelete</td>
         <td><input type="button" value="批量删除" style="width: 100px" class="change" onclick="delall();"></td>
     </tr>
     <%
@@ -59,6 +60,8 @@
         <td><%=s.getVac_name()%>
         </td>
         <td><%=s.getVac_type()%>
+        </td>
+        <td><%=s.getIsdelete()%>
         </td>
         <td>
             <%--            <a href="updateStu.jsp?sid=<%=s.getCountry_id()%>" class="change">修改</a>--%>

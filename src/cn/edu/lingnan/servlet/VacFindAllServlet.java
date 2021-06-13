@@ -24,8 +24,10 @@ public class VacFindAllServlet extends HttpServlet {
         //2
         VacDao vd=new VacDao();
         Vector<VacDto> v=vd.findAllVac();
+//        Vector<VacDto> v=vd.findAllVac_isdelete();
         HttpSession session=req.getSession();
         session.setAttribute("allVac",v);
+//        session.setAttribute("allVac_isdelete",v);
         //3
         resp.sendRedirect(req.getContextPath()+"/admin/allVac.jsp");
     }
