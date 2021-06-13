@@ -23,7 +23,7 @@ public class StuUpdateServlet extends HttpServlet {
         String password=req.getParameter("password");
         String superuser=req.getParameter("superuser");
         String people=req.getParameter("people");
-        System.out.println("--------"+sid);
+        String isdelete=req.getParameter("isdelete");
         //2处理业务逻辑
         CountryDao sd =new CountryDao();
         CountryDto sdto= new CountryDto();
@@ -32,6 +32,7 @@ public class StuUpdateServlet extends HttpServlet {
         sdto.setPassword(password);
         sdto.setVac_able(Integer.parseInt(superuser));
         sdto.setPeople(people);
+        sdto.setIsdelete(Integer.parseInt(isdelete));
         int flag=sd.updataInfotoCountry(sdto);
         Vector<CountryDto> v=sd.findAllCountry();
         HttpSession session=req.getSession();

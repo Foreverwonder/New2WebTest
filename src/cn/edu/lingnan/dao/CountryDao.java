@@ -261,12 +261,13 @@ public class CountryDao {
         try {
             conn = DataAccess.getConnection();
             prep = conn.prepareStatement
-                    ("update country set country_name=?,password=?,people=?,vac_able=? where country_id=? ");
+                    ("update country set country_name=?,password=?,people=?,vac_able=?,isdelete=? where country_id=? ");
             prep.setString(1, _sd.getCountry_name());
             prep.setString(2, _sd.getPassword());
             prep.setString(3, _sd.getPeople());
             prep.setInt(4, _sd.getVac_able());
-            prep.setString(5, _sd.getCountry_id());
+            prep.setInt(5, _sd.getIsdelete());
+            prep.setString(6, _sd.getCountry_id());
             prep.executeUpdate();
             flag = 1;
         } catch (SQLException e) {
