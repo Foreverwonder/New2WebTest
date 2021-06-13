@@ -74,7 +74,7 @@
         %>
     </table>
     <div style="margin-left: 2%">
-        <form method="register" action="register.jsp" target="_blank">
+        <form method="register" action="register.jsp" target="_self">
             <input type="submit" value="添加新的国家信息" style="margin-top: 25px;" ></input>
         </form>
     </div>

@@ -14,7 +14,7 @@
 
 <%--有个js文件没写-----------------------------------------%>
 
-<form name="form" action="newVac" target="_blank">
+<form name="form" action="newVac" target="_self">
     <table class="hoverable" align="center">
 <%--        <tr>--%>
 <%--            <td>疫苗编号</td>--%>

@@ -71,7 +71,7 @@
 <%--    </div>--%>
 </table>
 <div style="margin-left:15.5%">
-    <form method="newVac" action="newC_V.jsp" target="_blank">
+    <form method="newVac" action="newC_V.jsp" target="_self">
         <input type="submit" value="添加新的接种信息" style="margin-top: 25px;"></input>
     </form>
 </div>

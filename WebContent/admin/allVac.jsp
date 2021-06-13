@@ -83,7 +83,7 @@
 <%--    --%>
 </table>
 <div style="margin-left:9%">
-    <form method="neVacwVac" action="newVac.jsp" target="_blank" >
+    <form method="neVacwVac" action="newVac.jsp" target="_self" >
         <input type="submit" value="添加新的疫苗信息" style="margin-top: 30px;"></input>
     </form>
 </div>

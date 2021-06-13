@@ -14,7 +14,7 @@
 
 <%--有个js文件没写-----------------------------------------%>
 
-<form name="form" action="register" target="_blank">
+<form name="form" action="register" target="_self">
     <table class="hoverable" align="center">
 <%--    <tr>--%>
 <%--        <td>国家编号</td>--%>
