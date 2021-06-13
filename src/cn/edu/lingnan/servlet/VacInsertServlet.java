@@ -24,7 +24,7 @@ public class VacInsertServlet extends HttpServlet {
         //2处理业务逻辑
         VacDao sd =new VacDao();
         VacDto sdto= new VacDto();
-        sdto.setVac_id(vac_id);
+        sdto.setVac_id(Integer.parseInt(vac_id));
         sdto.setVac_area(vac_area);
         sdto.setVac_name(vac_name);
         sdto.setVac_type(vac_type);

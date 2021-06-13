@@ -84,7 +84,7 @@ public class CountryDao {
             rs = prep.executeQuery();
             if (rs.next()) {
 //                flag = true;
-                sdto.setCountry_id(rs.getString("country_id"));
+                sdto.setCountry_id(rs.getInt("country_id"));
                 sdto.setCountry_name(rs.getString("country_name"));
                 sdto.setPassword(rs.getString("password"));
                 sdto.setVac_able(rs.getInt("vac_able"));
@@ -112,7 +112,7 @@ public class CountryDao {
             rs = prep.executeQuery();
             while (rs.next()) {
                 CountryDto s = new CountryDto();
-                s.setCountry_id(rs.getString("country_id"));
+                s.setCountry_id(rs.getInt("country_id"));
                 s.setPassword(rs.getString("password"));
                 s.setCountry_name(rs.getString("country_name"));
                 s.setPeople(rs.getString("people"));
@@ -144,7 +144,7 @@ public class CountryDao {
             rs = prep.executeQuery();
             while (rs.next()) {
                 CountryDto s = new CountryDto();
-                s.setCountry_id(rs.getString("country_id"));
+                s.setCountry_id(rs.getInt("country_id"));
                 s.setPassword(rs.getString("password"));
                 s.setCountry_name(rs.getString("country_name"));
                 s.setPeople(rs.getString("people"));
@@ -172,7 +172,7 @@ public class CountryDao {
 //                    "insert into country values(?,?,?,?,?)";//
                     "insert into country values(?,?,?,?,?,0)";//
             prep = conn.prepareStatement(sql);
-            prep.setString(1, _sd.getCountry_id());
+            prep.setInt(1, _sd.getCountry_id());
             prep.setString(2, _sd.getPassword());
             prep.setString(3, _sd.getCountry_name());
             prep.setString(4, _sd.getPeople());
@@ -198,7 +198,7 @@ public class CountryDao {
             prep = conn.prepareStatement
                     ("update country set country_name =? where country_id=?");
             prep.setString(1, _sd.getCountry_name());
-            prep.setString(2, _sd.getCountry_id());
+            prep.setInt(2, _sd.getCountry_id());
             prep.executeUpdate();
             flag = 1;
         } catch (SQLException e) {
@@ -220,7 +220,7 @@ public class CountryDao {
             prep = conn.prepareStatement
                     ("update country set people =? where country_id=?");
             prep.setString(1, _sd.getPeople());
-            prep.setString(2, _sd.getCountry_id());
+            prep.setInt(2, _sd.getCountry_id());
             prep.executeUpdate();
             flag = 1;
         } catch (SQLException e) {
@@ -241,7 +241,7 @@ public class CountryDao {
             prep = conn.prepareStatement
                     ("update country set vac_able =? where country_id=?");
             prep.setInt(1, _sd.getVac_able());
-            prep.setString(2, _sd.getCountry_id());
+            prep.setInt(2, _sd.getCountry_id());
             prep.executeUpdate();
             flag = 1;
         } catch (SQLException e) {
@@ -267,7 +267,7 @@ public class CountryDao {
             prep.setString(3, _sd.getPeople());
             prep.setInt(4, _sd.getVac_able());
             prep.setInt(5, _sd.getIsdelete());
-            prep.setString(6, _sd.getCountry_id());
+            prep.setInt(6, _sd.getCountry_id());
             prep.executeUpdate();
             flag = 1;
         } catch (SQLException e) {

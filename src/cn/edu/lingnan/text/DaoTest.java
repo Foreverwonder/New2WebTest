@@ -319,7 +319,7 @@ public class DaoTest {
     public static void insertCountry() {
         CountryDto s = new CountryDto();
         System.out.println("请输入需要新增的国家ID：");
-        s.setCountry_id(scanf.nextLine());
+        s.setCountry_id(Integer.parseInt(scanf.nextLine()));
         System.out.println("请输入需要新增的国家姓名：");
         s.setCountry_name(scanf.nextLine());
         System.out.println("请输入需要新增的国家人口：");
@@ -336,7 +336,7 @@ public class DaoTest {
     public static void insertVac() {
         VacDto c = new VacDto();
         System.out.println("请输入需要新增的疫苗ID：");
-        c.setVac_id(scanf.nextLine());
+        c.setVac_id(Integer.parseInt(scanf.nextLine()));
         System.out.println("请输入需要新增的疫苗产地：");
         c.setVac_area(scanf.nextLine());
         System.out.println("请输入需要新增的疫苗名称");
@@ -380,7 +380,7 @@ public class DaoTest {
             String str = scanf.nextLine();
             if (str.equals("1")) {
                 System.out.println("请输入要更改的国家ID");
-                s.setCountry_id(scanf.nextLine());
+                s.setCountry_id(Integer.parseInt(scanf.nextLine()));
                 System.out.println("请输入要更改的国家名字");
                 s.setCountry_name(scanf.nextLine());
                 if (sd.updataCountryCountry_name(s) == 1) {
@@ -388,7 +388,7 @@ public class DaoTest {
                 } else System.out.println("更改名字失败");
             } else if (str.equals("2")) {
                 System.out.println("请输入要更改的国家ID");
-                s.setCountry_id(scanf.nextLine());
+                s.setCountry_id(Integer.parseInt(scanf.nextLine()));
                 System.out.println("请输入要更改的国家人口");
                 s.setPeople(scanf.nextLine());
                 if (sd.updataCountryPeople(s) == 1) {
@@ -396,7 +396,7 @@ public class DaoTest {
                 } else System.out.println("更改人口失败");
             } else if (str.equals("3")) {
                 System.out.println("请输入要更改的国家ID");
-                s.setCountry_id(scanf.nextLine());
+                s.setCountry_id(Integer.parseInt(scanf.nextLine()));
                 System.out.println("请输入要更改的国家是否研发疫苗");
                 s.setVac_able(Integer.parseInt(scanf.nextLine()));
                 if (sd.updataCountryVac_able(s) == 1) {
@@ -415,7 +415,7 @@ public class DaoTest {
     public static void updateVac() {
         VacDto c = new VacDto();
         System.out.println("请输入更新疫苗名的vac_id：");
-        c.setVac_id(scanf.nextLine());
+        c.setVac_id(Integer.parseInt(scanf.nextLine()));
         System.out.println("请输入需要更新的vac_name：");
         c.setVac_name(scanf.nextLine());
         if (cd.updataVac(c) == 1) {

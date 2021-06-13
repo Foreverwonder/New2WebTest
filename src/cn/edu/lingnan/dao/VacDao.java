@@ -68,7 +68,7 @@ public class VacDao {
 //                    "insert into vac values(?,?,?,?)";
                     "insert into vac values(?,?,?,?,0)";
             prep = conn.prepareStatement(sql);
-            prep.setString(1, _cd.getVac_id());
+            prep.setInt(1, _cd.getVac_id());
             prep.setString(2, _cd.getVac_area());
             prep.setString(3, _cd.getVac_name());
             prep.setString(4, _cd.getVac_type());
@@ -109,7 +109,7 @@ public class VacDao {
             prep.setString(2, _sd.getVac_area());
             prep.setString(3, _sd.getVac_type());
             prep.setInt(4, _sd.getIsdelete());
-            prep.setString(5, _sd.getVac_id());
+            prep.setInt(5, _sd.getVac_id());
             prep.executeUpdate();
             flag = 1;
         } catch (SQLException e) {
@@ -173,7 +173,7 @@ public class VacDao {
             rs = prep.executeQuery();
             while (rs.next()) {
                 VacDto c = new VacDto();
-                c.setVac_id(rs.getString("vac_id"));
+                c.setVac_id(rs.getInt("vac_id"));
                 c.setVac_area(rs.getString("vac_area"));
                 c.setVac_name(rs.getString("vac_name"));
                 c.setVac_type(rs.getString("vac_type"));
@@ -201,7 +201,7 @@ public class VacDao {
             rs = prep.executeQuery();
             while (rs.next()) {
                 VacDto c = new VacDto();
-                c.setVac_id(rs.getString("vac_id"));
+                c.setVac_id(rs.getInt("vac_id"));
                 c.setVac_area(rs.getString("vac_area"));
                 c.setVac_name(rs.getString("vac_name"));
                 c.setVac_type(rs.getString("vac_type"));

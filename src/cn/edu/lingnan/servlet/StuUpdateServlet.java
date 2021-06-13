@@ -27,7 +27,7 @@ public class StuUpdateServlet extends HttpServlet {
         //2处理业务逻辑
         CountryDao sd =new CountryDao();
         CountryDto sdto= new CountryDto();
-        sdto.setCountry_id(sid);
+        sdto.setCountry_id(Integer.parseInt(sid));
         sdto.setCountry_name(sname);
         sdto.setPassword(password);
         sdto.setVac_able(Integer.parseInt(superuser));

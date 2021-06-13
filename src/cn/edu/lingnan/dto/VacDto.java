@@ -4,7 +4,7 @@ package cn.edu.lingnan.dto;
  * 对疫苗表vac进行信息传输
  */
 public class VacDto {
-    private String vac_id;
+    private int vac_id;
     private String vac_area;//add
     private String vac_name;
     private String vac_type;//add
@@ -35,11 +35,11 @@ public class VacDto {
     }
 
 
-    public String getVac_id() {
+    public int getVac_id() {
         return vac_id;
     }
 
-    public void setVac_id(String vac_id) {
+    public void setVac_id(int vac_id) {
         this.vac_id = vac_id;
     }
 
