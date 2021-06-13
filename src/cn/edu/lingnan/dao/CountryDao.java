@@ -170,13 +170,13 @@ public class CountryDao {
             conn = DataAccess.getConnection();
             String sql =
 //                    "insert into country values(?,?,?,?,?)";//
-                    "insert into country values(?,?,?,?,?,0)";//
+                    "insert into country values(null,?,?,?,?,0)";//
             prep = conn.prepareStatement(sql);
-            prep.setInt(1, _sd.getCountry_id());
-            prep.setString(2, _sd.getPassword());
-            prep.setString(3, _sd.getCountry_name());
-            prep.setString(4, _sd.getPeople());
-            prep.setInt(5, _sd.getVac_able());
+//            prep.setInt(1, _sd.getCountry_id());
+            prep.setString(1, _sd.getPassword());
+            prep.setString(2, _sd.getCountry_name());
+            prep.setString(3, _sd.getPeople());
+            prep.setInt(4, _sd.getVac_able());
             int i = prep.executeUpdate();
 //            System.out.println("i=" + i);
             flag = 1;//若上方prep.executeUpdate()失败将直接跳转到catch块，flag不会被置为1

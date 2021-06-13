@@ -30,7 +30,7 @@
             CountryDto s = null;
             while (it.hasNext()) {
                 s = it.next();
-                if (s.getCountry_id().equals(sid)) {
+                if (s.getCountry_id()==(Integer.parseInt(sid))) {
         %>
         <tr>
             <td><input type="hidden" name="sid" value=<%=s.getCountry_id()%>><%=s.getCountry_id()%>

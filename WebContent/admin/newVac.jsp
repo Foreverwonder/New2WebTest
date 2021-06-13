@@ -16,12 +16,12 @@
 
 <form name="form" action="newVac" target="_blank">
     <table class="hoverable" align="center">
-        <tr>
-            <td>疫苗编号</td>
-            <td><input type="text" name="vac_id" id="vac_id">
-                <font color="red">*</font>
-            </td>
-        </tr>
+<%--        <tr>--%>
+<%--            <td>疫苗编号</td>--%>
+<%--            <td><input type="text" name="vac_id" id="vac_id">--%>
+<%--                <font color="red">*</font>--%>
+<%--            </td>--%>
+<%--        </tr>--%>
 
         <tr>
             <td>疫苗产地</td>

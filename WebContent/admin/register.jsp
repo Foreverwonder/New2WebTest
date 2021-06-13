@@ -16,12 +16,12 @@
 
 <form name="form" action="register" target="_blank">
     <table class="hoverable" align="center">
-    <tr>
-        <td>国家编号</td>
-        <td><input type="text" name="sid" id="sid">
-            <font color="red">*</font>
-        </td>
-    </tr>
+<%--    <tr>--%>
+<%--        <td>国家编号</td>--%>
+<%--        <td><input type="text" name="sid" id="sid">--%>
+<%--            <font color="red">*</font>--%>
+<%--        </td>--%>
+<%--    </tr>--%>
 
         <tr>
             <td>国家名称</td>

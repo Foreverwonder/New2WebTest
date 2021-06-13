@@ -17,7 +17,7 @@ public class StuInsertServlet_notAdmin extends HttpServlet {
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
         //1获取页面提交的参数
-        String sid=req.getParameter("sid");
+//        String sid=req.getParameter("sid");
         String sname=req.getParameter("sname");
         String password=req.getParameter("password");
         String superuser=req.getParameter("superuser");
@@ -26,7 +26,7 @@ public class StuInsertServlet_notAdmin extends HttpServlet {
         //2处理业务逻辑
         CountryDao sd =new CountryDao();
         CountryDto sdto= new CountryDto();
-        sdto.setCountry_id(Integer.parseInt(sid));
+//        sdto.setCountry_id(Integer.parseInt(sid));
         sdto.setCountry_name(sname);
         sdto.setPassword(password);
         sdto.setVac_able(Integer.parseInt(superuser));

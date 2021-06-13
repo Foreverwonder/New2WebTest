@@ -66,12 +66,12 @@ public class VacDao {
             conn = DataAccess.getConnection();
             String sql =
 //                    "insert into vac values(?,?,?,?)";
-                    "insert into vac values(?,?,?,?,0)";
+                    "insert into vac values(null,?,?,?,0)";
             prep = conn.prepareStatement(sql);
-            prep.setInt(1, _cd.getVac_id());
-            prep.setString(2, _cd.getVac_area());
-            prep.setString(3, _cd.getVac_name());
-            prep.setString(4, _cd.getVac_type());
+//            prep.setInt(1, _cd.getVac_id());
+            prep.setString(1, _cd.getVac_area());
+            prep.setString(2, _cd.getVac_name());
+            prep.setString(3, _cd.getVac_type());
             int i = prep.executeUpdate();
             System.out.println("i=" + i);
             flag = 1;

@@ -30,7 +30,7 @@
         VacDto s=null;
         while(it.hasNext()){
             s=it.next();
-            if(s.getVac_id().equals(vac_id)){
+            if(s.getVac_id()==(Integer.parseInt(vac_id))){//原本是用.equals的
     %>
     <tr>
         <td><input type="hidden" name="vac_id" value=<%=s.getVac_id()%>><%=s.getVac_id()%></td>
