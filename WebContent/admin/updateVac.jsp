@@ -20,6 +20,7 @@
         <td>疫苗产地</td>
         <td>疫苗名称</td>
         <td>疫苗类型</td>
+        <td>isdelete</td>
         <td>操作</td>
         </tr>
     <%
@@ -36,6 +37,7 @@
         <td><input type="text" name="vac_area" value=<%=s.getVac_area()%>></td>
         <td><input type="text" name="vac_name" value=<%=s.getVac_name()%>></td>
         <td><input type="text" name="vac_type" value=<%=s.getVac_type()%>></td>
+        <td><input type="text" name="isdelete" value=<%=s.getIsdelete()%>></td>
         <td>
             <input type="submit" value="确认修改" class="change"style="width: 100px"></a>
         </td>

@@ -104,11 +104,12 @@ public class VacDao {
         try {
             conn = DataAccess.getConnection();
             prep = conn.prepareStatement
-                    ("update vac set vac_name =?,vac_area=?,vac_type=? where vac_id=?");
+                    ("update vac set vac_name =?,vac_area=?,vac_type=?,isdelete=? where vac_id=?");
             prep.setString(1, _sd.getVac_name());
             prep.setString(2, _sd.getVac_area());
             prep.setString(3, _sd.getVac_type());
-            prep.setString(4, _sd.getVac_id());
+            prep.setInt(4, _sd.getIsdelete());
+            prep.setString(5, _sd.getVac_id());
             prep.executeUpdate();
             flag = 1;
         } catch (SQLException e) {
