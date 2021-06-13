@@ -107,6 +107,38 @@ public class CountryDao {
         ResultSet rs = null;
         try {
             conn = DataAccess.getConnection();
+            String sql = "select * from country";
+            prep = conn.prepareStatement(sql);
+            rs = prep.executeQuery();
+            while (rs.next()) {
+                CountryDto s = new CountryDto();
+                s.setCountry_id(rs.getString("country_id"));
+                s.setPassword(rs.getString("password"));
+                s.setCountry_name(rs.getString("country_name"));
+                s.setPeople(rs.getString("people"));
+                s.setVac_able(rs.getInt("vac_able"));
+                s.setIsdelete(rs.getInt("isdelete"));
+                v.add(s);
+            }
+
+        } catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        } finally {
+            DataAccess.closeConnection(conn, prep, rs);
+        }
+        return v;
+    }
+
+    // 查找所有的国家信息_假！！
+    public Vector<CountryDto> findAllCountry_isdelete() {
+        Vector<CountryDto> v = new Vector<CountryDto>();
+        Connection conn = null;
+//		Statement stat = null;
+        PreparedStatement prep = null;
+        ResultSet rs = null;
+        try {
+            conn = DataAccess.getConnection();
             String sql = "select * from country where isdelete=0";
             prep = conn.prepareStatement(sql);
             rs = prep.executeQuery();
@@ -128,8 +160,6 @@ public class CountryDao {
         }
         return v;
     }
-
-
     //插入一条国家记录
     public int insertInfoToCountry(CountryDto _sd) {
         int flag = 0;

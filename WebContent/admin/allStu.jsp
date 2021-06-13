@@ -39,6 +39,7 @@
             <td>国家密码</td>
             <td>国家权限</td>
             <td>国家人口总数</td>
+            <td>isdelete</td>
             <td><input type="button"value="批量删除" style="width: 100px"class="change" onclick="delall();"></td>
         </tr>
     <%
@@ -57,6 +58,7 @@
         <td><%=s.getPassword()%></td>
         <td><%=s.getVac_able()%></td>
         <td><%=s.getPeople()%></td>
+        <td><%=s.getIsdelete()%></td>
         <td>
 <%--            <a href="updateStu.jsp?sid=<%=s.getCountry_id()%>" class="change">修改</a>--%>
                  <input type="button" value="修改" onClick="location.href='updateStu.jsp?sid=<%=s.getCountry_id()%>'"class="change"/>

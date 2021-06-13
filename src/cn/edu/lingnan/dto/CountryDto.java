@@ -10,6 +10,16 @@ public class CountryDto {
     private String people;
     private int vac_able;
 
+    public int getIsdelete() {
+        return isdelete;
+    }
+
+    public void setIsdelete(int isdelete) {
+        this.isdelete = isdelete;
+    }
+
+    private int isdelete;
+
 	public String getPassword() {return password; }
 	public void setPassword(String password) {this.password = password; }
     public String getCountry_id() {

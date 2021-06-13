@@ -20,9 +20,9 @@ public class StuFindAllServlet_notAdmin extends HttpServlet {
         //1
         //2
         CountryDao sd=new CountryDao();
-        Vector<CountryDto> v=sd.findAllCountry();
+        Vector<CountryDto> v=sd.findAllCountry_isdelete();
         HttpSession session=req.getSession();
-        session.setAttribute("allStu",v);
+        session.setAttribute("allStu_isdelete",v);
         //3
         resp.sendRedirect(req.getContextPath()+"/allStu.jsp");
     }
