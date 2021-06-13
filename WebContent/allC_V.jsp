@@ -26,7 +26,7 @@
         <%--        <td><input type="button"value="批量删除" style="width: 100px"class="change" onclick="delall();"></td>--%>
     </tr>
     <%
-        Vector<C_VDto> v = (Vector<C_VDto>) session.getAttribute("allC_V");
+        Vector<C_VDto> v = (Vector<C_VDto>) session.getAttribute("allC_V_isdelete");
         Iterator<C_VDto> it = v.iterator();
         C_VDto s = null;
         while (it.hasNext()) {

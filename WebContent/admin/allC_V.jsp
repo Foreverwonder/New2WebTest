@@ -38,6 +38,7 @@
         <td>国家编号</td>
         <td>疫苗编号</td>
         <td>接种人数</td>
+        <td>isdelete</td>
         <td><input type="button"value="批量删除" style="width: 100px"class="change" onclick="delall();"></td>
     </tr>
     <%
@@ -54,12 +55,12 @@
         <td><%=s.getCountry_id()%></td>
         <td><%=s.getVac_id()%></td>
         <td><%=s.getVac_Over_Num()%></td>
+        <td><%=s.getIsdelete()%></td>
         <td>
             <input type="button" value="修改" onClick="location.href='updateC_V.jsp?vac_id=<%=s.getVac_id()%>&country_id=<%=s.getCountry_id()%>'"class="change"/>
             <input type="button" value="删除" onClick="location.href='deleteC_V?vac_id_=<%=s.getVac_id()%>&country_id_=<%=s.getCountry_id()%>'"class="change"/>
         </td>
     </tr>
-
     <%
         }
     %>

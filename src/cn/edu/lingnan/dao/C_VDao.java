@@ -25,6 +25,34 @@ public class C_VDao {
 		try {
 			conn = DataAccess.getConnection();
 //			String sql = "select * from c_v";
+			String sql = "select * from c_v";
+			prep = conn.prepareStatement(sql);
+			rs = prep.executeQuery();
+			while (rs.next()) {
+				C_VDto s = new C_VDto();
+				s.setCountry_id(rs.getString("country_id"));
+				s.setVac_id(rs.getString("vac_id"));
+				s.setVac_Over_Num(rs.getString("vac_over_num"));
+				s.setIsdelete(rs.getInt("isdelete"));
+				v.add(s);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			DataAccess.closeConnection(conn, prep, rs);
+		}
+		return v;
+	}
+
+	//查找所有接种情况_假！！
+	public Vector<C_VDto> findAllVac_Over_Num_isdelete() {
+		Vector<C_VDto> v=new Vector<C_VDto>();
+		Connection conn = null;
+		PreparedStatement prep = null;
+		ResultSet rs = null;
+		try {
+			conn = DataAccess.getConnection();
+//			String sql = "select * from c_v";
 			String sql = "select * from c_v where isdelete=0";
 			prep = conn.prepareStatement(sql);
 			rs = prep.executeQuery();
@@ -42,7 +70,6 @@ public class C_VDao {
 		}
 		return v;
 	}
-
 
 	// 实现按country_id和vac_id查找接种情况
 	public String findVac_Over_NumByCountry_idAndVac_id(String _country_id, String _vac_id) {
@@ -152,10 +179,11 @@ public class C_VDao {
 		try {
 			conn = DataAccess.getConnection();
 			prep = conn.prepareStatement
-	("update c_v set Vac_Over_Num =? where country_id=? and vac_id=?");
+	("update c_v set Vac_Over_Num=?,isdelete=? where country_id=? and vac_id=?");
 			prep.setString(1, _sd.getVac_Over_Num());
-			prep.setString(2, _sd.getCountry_id());
-			prep.setString(3, _sd.getVac_id());
+			prep.setInt(2, _sd.getIsdelete());
+			prep.setString(3, _sd.getCountry_id());
+			prep.setString(4, _sd.getVac_id());
 			prep.executeUpdate();
 			flag=1;
 		} catch (SQLException e) {

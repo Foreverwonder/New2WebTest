@@ -20,6 +20,7 @@
             <td>国家编号</td>
             <td>疫苗编号</td>
             <td>接种人数</td>
+            <td>isdelete</td>
             <td>操作</td>
         </tr>
         <%
@@ -53,6 +54,7 @@
             <td><input type="hidden" name="vac_id" value=<%=s.getVac_id()%>><%=s.getVac_id()%>
             </td>
             <td><input type="text" name="vac_over_num" value=<%=s.getVac_Over_Num()%>></td>
+            <td><input type="text" name="isdelete" value=<%=s.getIsdelete()%>></td>
             <td>
                 <input type="submit" value="确认修改" class="change" style="width: 100px"></a>
             </td>

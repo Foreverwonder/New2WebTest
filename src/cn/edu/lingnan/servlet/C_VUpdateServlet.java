@@ -23,24 +23,19 @@ public class C_VUpdateServlet extends HttpServlet {
         String country_id=req.getParameter("country_id");
         String vac_id=req.getParameter("vac_id");
         String vac_over_num=req.getParameter("vac_over_num");
-        System.out.println("-------"+country_id+"--------"+vac_id);
+        String isdelete=req.getParameter("isdelete");
         //2处理业务逻辑
-        System.out.println("这里肯定有");
         C_VDao sd =new C_VDao();
         C_VDto sdto= new C_VDto();
         sdto.setCountry_id(country_id);
-        System.out.println("这里有？");
         sdto.setVac_id(vac_id);
-        System.out.println("这里有？？");
         sdto.setVac_Over_Num(vac_over_num);
-        System.out.println("这里有？？？");
+        sdto.setIsdelete(Integer.parseInt(isdelete));
         int flag=sd.updataC_V(sdto);
-        System.out.println("update的flag="+flag);
         Vector<C_VDto> v=sd.findAllVac_Over_Num();
         HttpSession session=req.getSession();
         session.setAttribute("allC_V",v);
         //3
-//        System.out.println("herer1");
         resp.sendRedirect(req.getContextPath()+"/admin/allC_V.jsp");
     }
 
