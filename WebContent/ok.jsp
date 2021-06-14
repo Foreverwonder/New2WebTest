@@ -18,6 +18,7 @@ body{
 		%>
 		<span style="color: rgb(255,0,128)"><%=username %></span>
 	</h1>
+
 	<h2>联合国秘书长：疫情是全人类的敌人，国际社会应共同抵制新冠疫情</h2>
 <%--	<h3>只要登录成功，就可以访问该页面</h3>--%>
 	<h3><a href="admin/admin.jsp" style="color:rgb(255,0,128)">进入管理员页面</a></h3>

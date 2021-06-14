@@ -12,6 +12,7 @@
 </head>
 <!--<body style="background:#313131;background-color:rgba(255,0,128,1)">-->
 <body style="background-color:rgba(255,0,128,1)">
+
 <div class="menu-list">
     <a href="ok.jsp" target="mainCont" class="block menu-list-title center"
        style="border:none;margin-bottom:8px;color:black;">起始页</a>
@@ -58,8 +59,10 @@
         </li>
         <li>
             <ul class="menu-children">
-                <li><a href="basic_settings.html" title="站点基本设置" target="mainCont">疫苗的生产分配</a></li>
-                <li><a href="admin_list.html" title="站点基本设置" target="mainCont">疫苗接种分配</a></li>
+<%--                <li><a href="basic_settings.html" title="站点基本设置" target="mainCont">疫苗的生产分配</a></li>--%>
+                <li><a href="" title="站点基本设置" target="mainCont">疫苗的生产分配</a></li>
+<%--                <li><a href="admin_list.html" title="站点基本设置" target="mainCont">疫苗接种分配</a></li>--%>
+                <li><a href="" title="站点基本设置" target="mainCont">疫苗接种分配</a></li>
             </ul>
         </li>
 
@@ -69,7 +72,8 @@
         </li>
         <li>
             <ul class="menu-children">
-                <li><a href="advertising_list.html" title="站点基本设置" target="mainCont">人类命运共同体</a></li>
+<%--                <li><a href="advertising_list.html" title="站点基本设置" target="mainCont">人类命运共同体</a></li>--%>
+                <li><a href="" title="站点基本设置" target="mainCont">人类命运共同体</a></li>
             </ul>
         </li>
         <li class="menu-list-title">
@@ -78,10 +82,14 @@
         </li>
         <li>
             <ul class="menu-children">
-                <li><a href="user_list.html" title="会员列表" target="mainCont">大使馆</a></li>
-                <li><a href="add_user.html" title="添加会员" target="mainCont">外交工作团队</a></li>
-                <li><a href="user_rank.html" title="会员等级" target="mainCont">国家要员</a></li>
-                <li><a href="user_message.html" title="会员留言" target="mainCont">安全事项</a></li>
+<%--                <li><a href="user_list.html" title="会员列表" target="mainCont">大使馆</a></li>--%>
+                <li><a href="" title="会员列表" target="mainCont">大使馆</a></li>
+<%--                <li><a href="add_user.html" title="添加会员" target="mainCont">外交工作团队</a></li>--%>
+                <li><a href="" title="添加会员" target="mainCont">外交工作团队</a></li>
+<%--                <li><a href="user_rank.html" title="会员等级" target="mainCont">国家要员</a></li>--%>
+                <li><a href="" title="会员等级" target="mainCont">国家要员</a></li>
+<%--                <li><a href="user_message.html" title="会员留言" target="mainCont">安全事项</a></li>--%>
+                <li><a href="" title="会员留言" target="mainCont">安全事项</a></li>
             </ul>
         </li>
     </ul>

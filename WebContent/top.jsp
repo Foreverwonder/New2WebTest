@@ -28,7 +28,10 @@
       String username = (String) session.getAttribute("username");
   %>
 		<%=username %>
-
+  <audio autoplay="autoplay" loop="loop">
+		<source src="建党百年主题MV《星辰大海》.mp3" type="audio/mpeg">
+		您的浏览器不支持 audio 元素。
+	</audio>
   </span></a>
         <a href="#" title="修改密码"><i class="clearIcon"></i><span>清除缓存</span></a>
         <a href="revise_password.html" target="mainCont" title="修改密码"><i class="revisepwdIcon"></i><span>修改密码</span></a>

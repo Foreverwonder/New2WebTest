@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title>疫苗管理系统</title>
+<title>联合国疫苗信息管理系统</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <frameset rows="76,*" framespacing="0" border="0">
   <frame src="top.jsp" id="header-frame" name="header-frame" frameborder="no" scrolling="no">
@@ -16,6 +16,7 @@
 </frameset><noframes></noframes>
 </head>
 <body>
+
 <style>
 .copyrights{text-indent:-9999px;height:0;line-height:0;font-size:0;overflow:hidden;}
 </style>
