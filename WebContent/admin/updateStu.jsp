@@ -1,27 +1,27 @@
-<%@ page language="java" contentType="text/html; charset=GBK"
-         pageEncoding="GBK" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+         pageEncoding="UTF-8" %>
 <%@ page import="java.util.*,cn.edu.lingnan.dto.CountryDto" %>
 
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="GBK">
-    <title>修改国家信息</title>
+    <meta charset="UTF-8">
+    <title>淇敼鍥藉淇℃伅</title>
     <link rel="stylesheet" type="text/css" href="allstu.css">
 
 </head>
 <body>
-<h1>修改国家信息</h1>
+<h1>淇敼鍥藉淇℃伅</h1>
 <form action="updateStu">
     <table align="center">
         <tr>
-            <td>国家编号</td>
-            <td>国家名字</td>
-            <td>国家密码</td>
-            <td>国家权限</td>
-            <td>国家人口总量</td>
+            <td>鍥藉缂栧彿</td>
+            <td>鍥藉鍚嶅瓧</td>
+            <td>鍥藉瀵嗙爜</td>
+            <td>鍥藉鏉冮檺</td>
+            <td>鍥藉浜哄彛鎬婚噺</td>
             <td>isdelete</td>
-            <td>操作</td>
+            <td>鎿嶄綔</td>
         </tr>
         <%
             Vector<CountryDto> v = (Vector<CountryDto>) session.getAttribute("allStu");
@@ -41,7 +41,7 @@
             <td><input type="text" name="people" value=<%=s.getPeople()%>></td>
             <td><input type="text" name="isdelete" value=<%=s.getIsdelete()%>></td>
             <td>
-                <input type="submit" value="确认修改" class="change" style="width: 100px"></a>
+                <input type="submit" value="纭淇敼" class="change" style="width: 100px"></a>
             </td>
         </tr>
         <%

@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=GBK"
-         pageEncoding="GBK" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+         pageEncoding="UTF-8" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -17,26 +17,26 @@
 <body>
 <div class="header">
     <div class="logo">
-        <%--  <img src="images/admin_logo.png" title="ÔÚÄÄ¶ù"/>--%>
+        <%--  <img src="images/admin_logo.png" title="åœ¨å“ªå„¿"/>--%>
     </div>
     <div class="fr top-link">
-        <%--     <h1>ÒßÇéÒßÃçÐÅÏ¢¹ÜÀíÏµÍ³</h1>--%>
-        <a class="abc">ÁªºÏ¹úÒßÃçÐÅÏ¢¹ÜÀíÏµÍ³</a>
-        <a href="#" target="_blank" title="·ÃÎÊÕ¾µã"><i class="shopLinkIcon"></i><span>·ÃÎÊÕ¾µã</span></a>
-        <a href="admin_list.html" target="mainCont" title="DeathGhost"><i class="adminIcon"></i><span>µ±Ç°¹ú¼Ò£º
+        <%--     <h1>ç–«æƒ…ç–«è‹—ä¿¡æ¯ç®¡ç†ç³»ç»Ÿ</h1>--%>
+        <a class="abc">è”åˆå›½ç–«è‹—ä¿¡æ¯ç®¡ç†ç³»ç»Ÿ</a>
+        <a href="#" target="_blank" title="è®¿é—®ç«™ç‚¹"><i class="shopLinkIcon"></i><span>è®¿é—®ç«™ç‚¹</span></a>
+        <a href="admin_list.html" target="mainCont" title="DeathGhost"><i class="adminIcon"></i><span>å½“å‰å›½å®¶ï¼š
   <%
       String username = (String) session.getAttribute("username");
   %>
 		<%=username %>
   <audio autoplay="autoplay" loop="loop">
-		<source src="½¨µ³°ÙÄêÖ÷ÌâMV¡¶ÐÇ³½´óº£¡·.mp3" type="audio/mpeg">
-		ÄúµÄä¯ÀÀÆ÷²»Ö§³Ö audio ÔªËØ¡£
+		<source src="å»ºå…šç™¾å¹´ä¸»é¢˜MVã€Šæ˜Ÿè¾°å¤§æµ·ã€‹.mp3" type="audio/mpeg">
+		æ‚¨çš„æµè§ˆå™¨ä¸æ”¯æŒ audio å…ƒç´ ã€‚
 	</audio>
   </span></a>
-        <a href="#" title="ÐÞ¸ÄÃÜÂë"><i class="clearIcon"></i><span>Çå³ý»º´æ</span></a>
-        <a href="revise_password.html" target="mainCont" title="ÐÞ¸ÄÃÜÂë"><i class="revisepwdIcon"></i><span>ÐÞ¸ÄÃÜÂë</span></a>
-        <a href="loginout" title="°²È«ÍË³ö" style="background:rgb(255,0,128);" target="_parent"><i
-                class="quitIcon"></i><span>°²È«ÍË³ö£¿</span></a>
+        <a href="#" title="ä¿®æ”¹å¯†ç "><i class="clearIcon"></i><span>æ¸…é™¤ç¼“å­˜</span></a>
+        <a href="revise_password.html" target="mainCont" title="ä¿®æ”¹å¯†ç "><i class="revisepwdIcon"></i><span>ä¿®æ”¹å¯†ç </span></a>
+        <a href="loginout" title="å®‰å…¨é€€å‡º" style="background:rgb(255,0,128);" target="_parent"><i
+                class="quitIcon"></i><span>å®‰å…¨é€€å‡ºï¼Ÿ</span></a>
     </div>
 </div>
 </body>

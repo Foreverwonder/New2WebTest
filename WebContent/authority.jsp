@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=GBK"
-         pageEncoding="GBK" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+         pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,15 +12,15 @@
     }
 </style>
 <body>
-<h1>��ǰ����:
+<h1>当前国家:
     <%
         String username = (String) session.getAttribute("username");
     %>
     <%=username %>
 </h1>
-<h1 style="color: rgb(255,0,128)">Ȩ�޲��㣬��ֹ����!</h1>
-<!--	<h3>���û�Ȩ�޲�Ϊ1ʱ������admin.htmlʱ��ת����</h3>-->
-<h3>������ͨ�û�ҳ�������<br>��<a href="loginout" target="_blank" style="color:rgb(255,0,128)">�˳�ϵͳ</a>���Թ���Ա���ݵ�½</h3>
+<h1 style="color: rgb(255,0,128)">权限不足，禁止访问!</h1>
+<!--	<h3>当用户权限不为1时，访问admin.html时跳转至此</h3>-->
+<h3>请在普通用户页面浏览，<br>或<a href="loginout" target="_blank" style="color:rgb(255,0,128)">退出系统</a>，以管理员身份登陆</h3>
 </body>
 </html>
 

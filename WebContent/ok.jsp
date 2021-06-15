@@ -1,10 +1,10 @@
-<%@ page language="java" contentType="text/html; charset=GBK"
-    pageEncoding="GBK"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="GBK">
-<title>��ͨ�û�ҳ��</title>
+	<meta charset="UTF-8">
+<title>普通用户页面</title>
 </head>
 <style>
 body{
@@ -13,17 +13,17 @@ body{
 </style>
 <body onload="opener.Location.reload()">
 <div style="position:relative;top:100px;">
-	<h1 align="center">��½�ɹ�,Welcome:
+	<h1 align="center">登陆成功,Welcome:
 		<%
 			String username =(String)session.getAttribute("username");
 		%>
 		<span style="color: rgb(255,0,128)"><%=username %></span>
 	</h1>
-	<h2 align="center">���Ϲ����鳤����������ȫ����ĵ��ˣ��������Ӧ��ͬ�����¹����顣��</h2>
+	<h2 align="center">联合国秘书长：“疫情是全人类的敌人，国际社会应共同抵制新冠疫情。”</h2>
 </div>
 
-<%--	<h3><a href="admin/admin.jsp" style="color:rgb(255,0,128)">�������Աҳ��</a></h3>--%>
-<%--	<h3><a href="loginout" target="_parent" style="color:rgb(255,0,128)">�˳�ϵͳ</a></h3>--%>
+<%--	<h3><a href="admin/admin.jsp" style="color:rgb(255,0,128)">进入管理员页面</a></h3>--%>
+<%--	<h3><a href="loginout" target="_parent" style="color:rgb(255,0,128)">退出系统</a></h3>--%>
 
 </body>
 </html>
