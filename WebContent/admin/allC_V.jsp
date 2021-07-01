@@ -31,7 +31,7 @@
     </style>
 </head>
 <body>
-<h1>LQJ的接种信息页面</h1>
+<h1>世界各国的接种信息页面</h1>
 <table class="hoverable" align="center">
     <tr>
         <td><input type="checkbox" onclick="allcheck(this);"style="background-color: yellow"></td>
@@ -41,15 +41,13 @@
         <td>isdelete</td>
         <td><input type="button"value="批量删除" style="width: 100px"class="change" onclick="delall();"></td>
     </tr>
-    <%
+    <%//插入语句获取session，调用数据库的findAllC_V方法，再用指针指向并输出
         Vector<C_VDto>v =(Vector<C_VDto>)session.getAttribute("allC_V");
         Iterator<C_VDto> it=v.iterator();
         C_VDto s=null;
         while(it.hasNext()){
             s=it.next();
     %>
-
-
     <tr>
         <td><input type="checkbox" name="check" value="<%=s.getCountry_id()%>=<%=s.getVac_id()%>"></td>      <%--两个参数的壮举 --%>
         <td><%=s.getCountry_id()%></td>

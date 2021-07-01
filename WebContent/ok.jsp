@@ -15,7 +15,7 @@ body{
 <div style="position:relative;top:100px;">
 	<h1 align="center">登陆成功,Welcome:
 		<%
-			String username =(String)session.getAttribute("username");
+			String username =(String)session.getAttribute("username");//插入java语句获取session展示国家名
 		%>
 		<span style="color: rgb(255,0,128)"><%=username %></span>
 	</h1>
