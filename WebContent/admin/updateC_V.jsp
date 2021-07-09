@@ -47,7 +47,6 @@
                 if ((a.equals(b)) && (c.equals(d))) {
                     System.out.println("进来了！?");
         %>
-        <h1>搞笑了</h1>
         <tr>
             <td><input type="hidden" name="country_id" value=<%=s.getCountry_id()%>><%=s.getCountry_id()%>
             </td>

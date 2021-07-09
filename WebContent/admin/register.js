@@ -2,11 +2,11 @@
  *
  */
 function check(){
-    if(form.sid.value ==""){
-        alert("用户编号不能为空!");
-        form.sid.focus();
-        return false;
-    }
+    // if(form.sid.value ==""){
+    //     alert("用户编号不能为空!");
+    //     form.sid.focus();
+    //     return false;
+    // }
 
     if(form.sname.value ==""){
         alert("用户名不能为空!");

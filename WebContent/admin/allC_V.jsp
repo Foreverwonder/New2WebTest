@@ -17,13 +17,6 @@
             background-color: rgba(153,153,153,0.1);
             color: white;
             height: 50px;
-            /*padding: 14px 20px;*/
-            /*margin: 8px 0;*/
-            /*margin-left: 30%;*/
-            /*border: solid;*/
-            /*border-radius: 4px;*/
-            /*cursor: pointer;*/
-            /*border-color: red;*/
         }
         input[type=submit]:hover {
             background-color: rgba(189,189,189,0.2);
